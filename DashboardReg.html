@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Control Consum - Vista general</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="./style/stylesDashboard.css"/>
+		<script src="./code/jquery-1.12.3.js"></script>
+		<script type="text/JavaScript" src="./code/codeLogout.js"></script>
+	</head>
+
+	<body onload="Log()">
+		<header>
+			<table>
+				<tr>
+					<td style="width: 4%;"></td>
+					<td id="logo" style="width: 5%;">
+						<a onclick="passLogHome()">
+							<img src="./img/Title.png" alt="Control Consum Logo" style="height:3em; cursor: pointer;"/>
+						</a>
+					</td>
+					<td style="width: 10%;"></td>
+					<td id = "perfil" class="menuButton">
+						<a onclick="passLogPerfil()">Perfil</a>
+					</td>
+					<td id = "consum" class="menuButton">
+						<a href="Consum.html">Consum</a>
+					</td>
+					<td id = "verd" class="menuButton">
+						<a onclick="passLogVerd()">Compromís<br>Energètic</a>
+					</td>					
+					<td style="width: 5em; height: 3em;">
+							<img id="login" src="./img/Login.png" alt="Login"
+								onmouseover="this.src='./img/LoginHover.png';"
+								onmouseout="this.src='./img/Login.png';"/>
+					</td>
+					<td style="width: 2%;"></td>
+					<div id="idUser"> User </div>
+				</tr>
+			</table>
+		</header>
+		
+		<div class="overlay" id="logout-box">
+			<form action="HomePage.html">
+				<a class="logoutButton" href="Dashboard.html">Vista general</a>
+				<input class="logoutButton" type="submit" value="Tancar sessió">
+			</form>
+		</div>
+		
+		<section>
+			<h4 style="margin-left: 4em; margin-top: 1em; margin-bottom: 0.4em;">Benvingut, User! Aquí tens un resum de la teva situació actual</h4>
+			<div style="background-color: rgba(228, 240, 251, 0.25); border: 0.2em solid #85AFD2; width: 54%;">
+				<h3> Perfil </h3><Button class="moreInfo" id="perfil"><a onclick="passLogPerfil()">Editar</a></Button>
+				<h4 style="margin-left: 30%; margin-top: 0; display: inline-block;"> Nº d'habitants: 4</h4>
+				<figure style="margin-left: 0.5em; margin-top: 0.3em;">
+					<img src="./img/cuinaN.png" alt="Cuina" width="32%"/>
+					<img src="./img/lavabo.png" alt="Lavabo" width="32%"/> 
+					<img src="./img/dorm1N.png" alt="Dorm1" width="32%"/>
+					<img src="./img/dorm2.png" alt="Dorm2" width="32%"/>
+					<img src="./img/salaN.png" alt="Menjador" width="32%"/> 
+				</figure> 
+			</div>
+			<div style="margin-left: 2.4em; background-color: rgba(255, 233, 215, 0.25); border: 0.2em solid #B2733F;">
+				<h3> Consum </h3><Button class="moreInfo" id="consum"><a href="Consum.html">Detalls</a></Button>
+				<figure>
+					<img style="margin: 1.7em 2em 1.8em 1.2em;" src="./img/grConsumResumReg.png" alt="ResumConsum" width="88%"/>
+				</figure> 
+			</div>
+		</section>
+		<div style="background-color: rgba(217, 236, 199, 0.25); width: 54%; border: 0.2em solid #6BA038; margin-bottom: 0;">
+			<div style="border: none; width: 50%; margin: 0;">
+				<h3> Compromís Energètic </h3><Button class="moreInfo" id="verd"><a href="ComportamentVerd.html">Detalls</a></Button>
+				<figure style="width: 100%;">
+					<img style="margin: 1.7em 2em 1.6em 0.5em;" src="./img/grComportResum.png" alt="ResumComport" width="96%"/>
+				</figure>
+			</div>
+			<div id="aparellDiv">
+				<Button class="moreInfo" id="aparell"><a href="ConsumAparell4.html">Altres aparells</a></Button>
+				<h4 style="margin-top: 36%;">Aparell més usat:</h4><h3 style="margin: 0;">Router WiFi</h3> <br><br><br><h4> Temps: </h4><h3 style="margin: 0;">24 hores al dia</h3> <br><br><br><h4>8 hores més que la mitjana!</h4>
+				<figure style="width: 30%; margin-left: 35%;">
+					<img src="./img/dev/routerV.png" alt="MesUsat" width="100%"/>
+				</figure> 
+			</div>
+		</div>
+		<footer>
+			<p>&#169 2016 Control Consum</p>
+		</footer>
+
+	</body>
+
+</html>

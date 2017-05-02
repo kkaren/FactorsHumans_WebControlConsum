@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Control Consum - Registre</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="./style/stylesRegistre.css"/>
+	</head>
+
+	<body>
+	<script src="./code/jquery-1.12.3.js"></script>
+	<script type="text/JavaScript" src="./code/codeRegistre.js"></script>
+		<header>
+			<table>
+				<tr>
+					<td style="width: 4%;"></td>
+					<td id="logo" style="width: 5%;">
+						<a>
+							<img src="./img/Title.png" alt="Control Consum Logo" style="height:3em; cursor: pointer;"/>
+						</a>
+					</td>
+					<td style="width: 10%;"></td>
+					<td id = "perfil" class="menuButton">
+						<a href="Perfil.html">Perfil</a>
+					</td>
+					<td id = "consum" class="menuButton">
+						<a href="ConsumNotReg.html">Consum</a>
+					</td>
+					<td id = "verd" class="menuButton">
+						<a>Compromís<br>Energètic</a>
+					</td>
+					<td style="width: 5em; height: 3em;">
+							<img id="login" src="./img/Login.png" alt="Login"
+								onmouseover="this.src='./img/LoginHover.png';"
+								onmouseout="this.src='./img/Login.png';"/>
+					</td>
+					<td style="width: 2%;"></td>
+				</tr>
+			</table>
+		</header>
+	
+		<div class="overlay" id="login-box">
+			<form action="JavaScript:checkInput()">
+				<h4 style="text-decoration: underline; margin-top: 0.3em; margin-bottom: 1em; padding-left: 0; padding-top: 1em;">Identifica't</h4>
+				<input style="margin-top: 0.5em;" class="textBoxLog" type="text" id="user" placeholder="Usuari">
+				<input class="textBoxLog" type="password" id="password" placeholder="Contrasenya">
+				<a class="loginButton" href="Perfil.html">Crear perfil</a>
+				<input class="loginButton" type="submit" value="Entrar">
+			</form>
+		</div>
+		
+		<div class="overlay" id="warning-box">
+			<img id="close" src="./img/closeP.png" alt="Close"
+								onmouseover="this.src='./img/closePHover.png';"
+								onmouseout="this.src='./img/closeP.png';"/>
+			<br>
+			<form action="HomePage.html">
+				<h4 style="text-decoration: none; padding-left: 0; padding-top: 1em;">El teu perfil no ha estat registrat, si surts ara es perdran les teves dades i aniràs a la pàgina principal. <br><br> Si estàs d'acord fes click a "Sortir", sinó REGISTRA'T!</h4>
+				<input id="sortirB" class="loginButton" type="submit" value="Sortir">
+			</form>
+		</div>
+		
+		<section>
+			<h2>Registre</h2>
+			<table><tr style="width: 10%;"><td></td></tr></table>
+			<form action="JavaScript:checkConfirm()">
+				<div>
+					<h4>Indica el nº d'habitants de la llar</h4>
+					<br>
+					<table>
+					<tr>
+						<td style="width: 2%;"></td>
+						<td style="width: 5%;">
+							<img style="cursor: pointer;" src="./img/lessP.png" alt="Login"
+							onmouseover="this.src='./img/lessPHover.png';"
+							onmouseout="this.src='./img/lessP.png';" onclick="minusOne()" width="30em;"/>
+						</td>
+						<td style="width: 5%;"><h2 id="numHab">1</h2></td>
+						<td style="width: 5%;">
+							<img style="cursor: pointer;" src="./img/moreP.png" alt="Login"
+							onmouseover="this.src='./img/morePHover.png';"
+							onmouseout="this.src='./img/moreP.png';" onclick="plusOne()" width="30em;"/>
+						</td>
+						<td style="width: 6%;"></td>
+					</tr>
+					</table>
+				</div>
+				<div>
+					<h4>Introdueix un nom d'usuari</h4>
+					<input id="userNew" class="textBox" type="text" id="user">
+				</div>
+				<div>
+					<h4>Introdueix una contrasenya</h4>
+					<input id="passNew" class="textBox" type="text" id="password">
+				</div>
+				
+				<input class="loginButton" type="submit" value="Confirmar" style="font-size: 1.2em; margin: 4em 2em 2em 0; float: right;">
+				
+			</form>
+		</section>
+		<footer>
+			<p>&#169 2016 Control Consum</p>
+		</footer>
+
+	</body>
+
+</html>

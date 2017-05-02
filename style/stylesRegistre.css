@@ -1,0 +1,212 @@
+/**** Body ****/
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/**** Header (Navigation Bar) ****/
+header {
+	margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+header table tr td {
+	text-align: center;
+}
+
+.menuButton{
+	background-color: pink;
+	border: 0.15em solid black;
+	width: 8em;
+	height: 3em;
+}
+
+.menuButton a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+}
+
+#perfil{
+	background-color: #9DC2E0;
+	border: 0.15em solid #85AFD2;
+	cursor: pointer;
+}
+
+#perfil:hover {
+	background-color: #9DC2E0;
+}
+
+#consum{
+	margin-top: 0;
+	background-color: #FFDBBE;
+	border: 0.15em solid #B2733F;
+	cursor: pointer;
+}
+
+#consum:hover {
+	background-color: #CE9668;
+}
+
+#verd{
+	background-color: #C7E5AA;
+	border: 0.15em solid #6BA038;
+	cursor: pointer;
+}
+
+#verd:hover {
+	background-color: #8AB95D;
+}
+
+#logo{
+	height: 3em;
+	width: 8em;
+}
+
+#login{
+	height: 3em;
+	width: 3em;
+	cursor: pointer;
+}
+
+.overlay{
+    padding: 1em 1em 0.5em 1em;
+	margin-top: 0;
+    border: 0.2em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 8em;
+  	height: 5em;
+  	background-color: #E4F0FB;
+  	border-radius: 2%;
+  	text-align:center;
+	z-index: 1;
+}
+
+#sortirB{
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	border: 0.15em solid #85AFD2;
+}
+
+#sortirB:hover{
+	background-color: #9DC2E0;
+}
+
+#warning-box{
+	border: 0.15em solid #85AFD2;
+	width: 15em; 
+	height: 14em; 
+}
+
+#close{
+	width: 1.15em; 
+	height: 1.15em;
+	float: right;
+	cursor: pointer;
+}
+
+/**** Login Box ****/
+#login-box{
+    padding: 0 1em 0.5em 1em;
+    border: 0.2em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 11em;
+  	height: 13em;
+  	background-color: #E4F0FB;
+  	border-radius: 2%;
+  	text-align:center;
+}
+
+.textBoxLog{
+	float: left;
+	border: 0.15em solid black;
+	font-family: "Arial", "Gadget", "sans-serif";
+	font-size: 1em;
+	width: 80%;
+	height: 100%;
+	margin: 2em 0.8em 0em 0.8em;
+}
+
+.loginButton {
+	border: 0.15em solid #85AFD2;
+	background-color: #CDE3F5;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0.2em 0.3em 0.2em 0.3em;
+	cursor: pointer;	
+	height: 100%;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.loginButton:hover {
+	background-color: #9DC2E0;
+}
+
+/**** Section ****/
+section {	
+	height: 100%;
+	width: 85.5%;
+	margin: 2em 4em 0.5em 4em;
+	padding: 2.3em 0 0 4em;
+	border: 0.2em solid #85AFD2;
+  	background-color: rgba(228, 240, 251, 0.25);
+	display: inline-block;
+}
+
+table {
+	width: 100%;
+	height: 100%;
+}
+ 
+h2{
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1.2em;
+	display: inline-block;
+}
+
+h4{
+	font-family: "Arial", "Gadget", "sans-serif";
+	padding-top: 2em;
+	margin: 0;
+}
+
+.textBox{
+	border: 0.15em solid black;
+	font-family: "Arial", "Gadget", "sans-serif";
+	font-size: 1em;
+	width: 65%;
+	height: 100%;
+	margin-top: 2.3em;
+	margin-bottom: 1.4em;
+}
+
+div{
+	margin-top: 2.2em;
+	padding-left: 1em;
+	float: left;
+	width: 31%;
+	height: 100%;
+	border-left: 0.15em solid #85AFD2;
+}
+
+/**** Footer ****/
+footer {
+	margin: 0.5em 4em 0.5em 4em;
+	clear: both;
+}
+
+footer p {
+	color: black;
+	text-align: right;
+}

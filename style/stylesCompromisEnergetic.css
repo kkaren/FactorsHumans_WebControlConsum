@@ -1,0 +1,299 @@
+/**** Body ****/
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/**** Header (Navigation Bar) ****/
+header {
+	margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+header table {
+	table-layout: auto;
+}
+
+header table tr td {
+	text-align: center;
+}
+
+.menuButton {
+	border: 0.15em solid black;
+	width: 8em;
+	height: 3em;
+}
+
+.menuButton a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+}
+
+#perfil{
+	background-color: #CDE3F5;
+	border: 0.15em solid #85AFD2;
+	cursor: pointer;
+}
+
+#perfil:hover {
+	background-color: #9DC2E0;
+}
+
+#consum{
+	margin-top: 0;
+	background-color: #FFDBBE;
+	border: 0.15em solid #B2733F;
+	cursor: pointer;
+}
+
+#consum:hover {
+	background-color: #CE9668;
+}
+
+#verd{
+	background-color: #8AB95D;
+	border: 0.15em solid #6BA038;
+	cursor: pointer;
+}
+
+#verd:hover {
+	background-color: #8AB95D;
+}
+
+#logo {
+	height: 3em;
+	width: 8em;
+}
+
+#login{
+	height: 3em;
+	width: 3em;
+	cursor: pointer;
+}
+
+.overlay {
+    padding: 0 1em 0.5em 1em;
+    border: 0.2em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 11em;
+  	height: 13em;
+  	background-color: #E4F0FB;
+  	border-radius: 2%;
+  	text-align:center;
+}
+
+#logout-box{
+	padding-top: 1em;
+	width: 8em; 
+	height: 5em; 
+}
+
+#warning-box{
+	border: 0.15em solid #6BA038;
+	background-color: #D9ECC7;
+	width: 15em; 
+	height: 16em; 
+}
+
+#registerB{
+	margin-top: 0;
+	background-color: #C7E5AA;
+	border: 0.15em solid #6BA038;
+}
+
+#registerB:hover{
+	background-color: #8AB95D;
+}
+
+#consum-box{
+	background-color: #FFE9D7; 
+	border: 0.15em solid #B2733F;	
+	width: 15em; 
+	height: 17em; 
+}
+
+#close{
+	width: 1.15em; 
+	height: 1.15em;
+	margin-top: 1em;
+	float: right;
+	cursor: pointer;
+}
+
+#closeC{
+	width: 1.15em; 
+	height: 1.15em;
+	margin-top: 1em;
+	float: right;
+	cursor: pointer;
+}
+
+#idUser{
+	margin: 0;
+	padding-top: 0.3em;
+    border: 0.15em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 3em;
+  	height: 1.8em;
+  	background-color: #E4F0FB;
+  	border-radius: 40%;
+  	text-align: center;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1em;
+}
+
+h4 {
+	font-family: "Arial", "Gadget", "sans-serif";
+	text-decoration: underline;
+}
+
+.textBox{
+	float: left;
+	border: 0.15em solid black;
+	font-family: "Arial", "Gadget", "sans-serif";
+	font-size: 1em;
+	width: 80%;
+	height: 100%;
+	margin: 2em 0.8em 0em 0.8em;
+}
+
+.loginButton {
+	border: 0.15em solid #85AFD2;
+	background-color: #CDE3F5;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0.2em 0.3em 0.2em 0.3em;
+	cursor: pointer;	
+	height: 100%;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.loginButton:hover {
+	background-color: #9DC2E0;
+}
+
+.subMenuButton {
+	background-color:#C7E5AA;
+	border: 0.15em solid #6BA038;
+	width: 8em;
+	height: 2em;
+	padding: 0;
+	cursor: pointer;
+}
+
+.subMenuButton a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+	font-size: 0.8em;
+}
+
+.subMenuButton:hover {
+	background-color: #8AB95D;
+}
+
+#leftSpace {
+	height: 2em;
+	width: 28em;
+}
+
+#rightSpace {
+	height: 2em;
+	width: 10em;
+}
+
+/**** Section ****/
+section {
+	margin: 0.5em 4em 0.5em 4em;
+}
+
+table {
+	width: 100%;
+}
+
+.leftButton {
+	border: 0.15em solid #6BA038;
+	width: 20em;
+	height: 30em;
+	background-color: #C7E5AA;
+	background-size: 30em 30em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/megaB/VerdMB.png');
+	cursor: pointer;
+}
+
+.rightButton {
+	border: 0.15em solid #6BA038;
+	width: 20em;
+	height: 30em;
+	background-color: #C7E5AA;
+	background-size: 30em 30em;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/megaB/AparellsMB.png');
+	cursor: pointer;
+}
+
+.leftButton p{
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1.8em;
+	padding: 0em 1em 0em 1em;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+.rightButton p{
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1.8em;
+	padding: 0em 1em 0em 1em;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+.leftButton:hover {
+	background-color: #8AB95D;
+	background-image: url('../img/megaB/VerdMBHover.png');
+}
+
+.rightButton:hover {
+	background-color: #8AB95D;
+	background-image: url('../img/megaB/AparellsMBHover.png');
+}
+
+
+/**** Footer ****/
+footer {
+	margin: 0.5em 4em 0.5em 4em;
+	clear: both;
+}
+
+footer p {
+	color: black;
+	text-align: right;
+}

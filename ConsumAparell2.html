@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Control Consum - Consum d'un aparell</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="./style/stylesConsumAparell2.css"/>
+		<script src="./code/jquery-1.12.3.js"></script>
+		<script type="text/JavaScript" src="./code/codeConsumAparell2.js"></script>
+	</head>
+
+	<body onload="readData()">
+	<script type="text/JavaScript" src="./code/codeLogin.js"></script>
+		<header>
+			<table>
+				<tr>
+					<td style="width:4%;">
+					</td>
+					<td id="logo" style="width:5%;">
+						<a onclick="passLogHome()">
+							<img src="./img/Title.png" alt="Control Consum Logo" style="height:3em; cursor: pointer;"/>
+						</a>
+					</td>
+					<td style="width:10%;">
+					</td>
+					<td id = "perfil" class="menuButton">
+						<a href="Perfil.html">Perfil</a>
+					</td>
+					<td id = "consum" class="menuButton">
+						<a>Consum</a>
+					</td>
+					<td id = "verd" class="menuButton">
+						<a href="CompromisEnergetic.html">Compromís<br>Energètic</a>
+					</td>
+					<td style="width: 5em; height: 3em;">
+							<img id="login" src="./img/Login.png" alt="Login"
+								onmouseover="this.src='./img/LoginHover.png';"
+								onmouseout="this.src='./img/Login.png';"/>
+					</td>
+					<td style="width:2%;">
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td id="leftSpace">
+					</td>
+					<td id="verdB" class="subMenuButton">
+						<a>Comportament verd</a>
+					</td>
+					<td class="subMenuButton active1">
+						<a href="ConsumAparell1.html">Consum d'un aparell</a>
+					</td>
+					<td id="rightSpace">
+					</td>
+				</tr>
+			</table>
+		</header>
+		<div class="overlay" id="login-box">
+			<form action="JavaScript:checkInput();">
+				<h4>Identifica't</h4>
+				<input style="margin-top: 0.1em;" class="textBoxLog" type="text" id="user" placeholder="Usuari">
+				<input class="textBoxLog" type="password" id="password" placeholder="Contrasenya">
+				<a class="loginButton" href="Perfil.html">Crear perfil</a>
+				<input class="loginButton" type="submit" value="Entrar">
+			</form>
+		</div>
+		
+		<div class="overlay" id="warning-box">
+			<img id="close" src="./img/close.png" alt="Close"
+								onmouseover="this.src='./img/closeHover.png';"
+								onmouseout="this.src='./img/close.png';"/>
+			<br>
+			<form action="Perfil.html">
+				<h4 style="text-decoration: none; padding-top: 0.5em;">Necessites tenir un perfil registrat per poder comparar el teu consum amb la mitjana i descobrir
+				si el teu comportament és verd. <br><br> No esperis més, crea el teu perfil i registra't!</h4>
+				<input id="registerB" class="loginButton" type="submit" value="Crear perfil">
+			</form>
+		</div>
+
+		<div class="overlay" id="consum-box">
+			<img id="closeC" src="./img/closeC.png" alt="Close"
+								onmouseover="this.src='./img/closeCHover.png';"
+								onmouseout="this.src='./img/closeC.png';"/>
+			<br>
+			<form action="Perfil.html">
+				<h4 style="text-decoration: none; padding-top: 0.5em;">Per veure amb detall el teu consum actual has de crear un perfil de la teva llar. <br><br> Si, a més, vols mantenir un control sobre el teu consum de manera regular i poder fer comparacions sobre les teves dades, no oblidis registrar-te! </h4>
+				<input id="consum" class="loginButton" type="submit" value="Crear perfil">
+			</form>
+		</div>
+		
+		<section>
+		
+			<div>
+				<p id="devName">XXX</p>
+				<img id="devImg" src="./img/Login.png" alt="Login" style="height:3em;"/>
+			</div>
+
+			<p id="instruction">Quantes hores l'utilitzes?</p>
+			
+			<div id="range">
+				<div id="leftdiv"></div>
+				<span id="r1" title="0 dies">0h</span>
+				<input class = "timeRange" id="timeRangeid" type="range" oninput="updateTime(this.value)" value="12" min="0" max="24" step="0.5" />
+				<span id="r2" title="1 dia">24h</span>
+				<div id="rightdiv"></div>
+			</div>
+			
+			<div>
+				<span id="currentTime" title="0.5 dies">12</span>
+			</div>
+			
+			<table class="time">
+				<tr>
+					<td id="leftSpace3">
+					</td>
+					<td id="dayBtd">
+						<div id="dayB" onclick="changeTime('day')">
+							<p>Hores/Dia</p>
+						</div>
+					</td>
+					<td id="weekBtd">
+						<div id="weekB" onclick="changeTime('week')">
+							<p>Hores/Setmana</p>
+						</div>
+					</td>
+					<td id="infoB">
+						<img id="trigger" src="./img/info.png" alt="Info" style="height:2em;"
+							onmouseover="this.src='./img/infoHover.png';"
+							onmouseout="this.src='./img/info.png';"/>
+					</td>
+					<td id="rightSpace3">
+					</td>
+				</tr>
+			</table>
+			
+			<div id="pop-up">
+      			<p>Si el consum de l'aparell es concentra 
+      				en dies de la setmana concrets és 
+      				millor introduir la quantitat d'hores 
+      				que s'utilitza l'aparell per setmana. 
+      				En cas contrari (si es fa un ús similar de 
+      				l'aparell cada dia de la setmana), 
+      				també és acurat introduir la quantitat d'hores que 
+      				s'utilitza l'aparell al dia.</p>
+    		</div>
+
+			<table class="nextBack">
+				<tr>
+					<td id="leftSpace2">
+					</td>
+					<td id="backButton">
+						<a href="ConsumAparell1.html">Canviar d'aparell</a>
+					</td>
+					<td id="centerSpace2">
+					</td>
+					<td id="nextButton">
+						<a href="JavaScript:sendData();">Següent -></a>
+					</td>
+					<td id="rightSpace2">
+					</td>
+				</tr>
+			</table>
+
+		</section>
+
+		<footer>
+			<p>&#169 2016 Control Consum</p>
+		</footer>
+
+	</body>
+
+</html>

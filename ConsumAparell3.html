@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Control Consum - Consum d'un aparell</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="./style/stylesConsumAparell3.css"/>
+		<script type="text/JavaScript" src="./code/codeConsumAparell3.js"></script>
+	</head>
+
+	<body onload="readData()">
+	<script src="./code/jquery-1.12.3.js"></script>
+	<script type="text/JavaScript" src="./code/codeLogin.js"></script>
+		<header>
+			<table>
+				<tr>
+					<td style="width:4%;">
+					</td>
+					<td id="logo" style="width:5%;">
+						<a onclick="passLogHome()">
+							<img src="./img/Title.png" alt="Control Consum Logo" style="height:3em; cursor: pointer;"/>
+						</a>
+					</td>
+					<td style="width:10%;">
+					</td>
+					<td id = "perfil" class="menuButton">
+						<a href="Perfil.html">Perfil</a>
+					</td>
+					<td id = "consum" class="menuButton">
+						<a>Consum</a>
+					</td>
+					<td id = "verd" class="menuButton">
+						<a href="CompromisEnergetic.html">Compromís<br>Energètic</a>
+					</td>
+					<td style="width: 5em; height: 3em;">
+							<img id="login" src="./img/Login.png" alt="Login"
+								onmouseover="this.src='./img/LoginHover.png';"
+								onmouseout="this.src='./img/Login.png';"/>
+					</td>
+					<td style="width:2%;">
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td id="leftSpace">
+					</td>
+					<td id="verdB" class="subMenuButton">
+						<a>Comportament verd</a>
+					</td>
+					<td class="subMenuButton active1">
+						<a href="ConsumAparell1.html">Consum d'un aparell</a>
+					</td>
+					<td id="rightSpace">
+					</td>
+				</tr>
+			</table>
+		</header>
+		<div class="overlay" id="login-box">
+			<form action="JavaScript:checkInput();">
+				<h4>Identifica't</h4>
+				<input style="margin-top: 0.1em;" class="textBoxLog" type="text" id="user" placeholder="Usuari">
+				<input class="textBoxLog" type="password" id="password" placeholder="Contrasenya">
+				<a class="loginButton" href="Perfil.html">Crear perfil</a>
+				<input class="loginButton" type="submit" value="Entrar">
+			</form>
+		</div>
+		
+		<div class="overlay" id="warning-box">
+			<img id="close" src="./img/close.png" alt="Close"
+								onmouseover="this.src='./img/closeHover.png';"
+								onmouseout="this.src='./img/close.png';"/>
+			<br>
+			<form action="Perfil.html">
+				<h4 style="text-decoration: none; padding-top: 0.5em;">Necessites tenir un perfil registrat per poder comparar el teu consum amb la mitjana i descobrir
+				si el teu comportament és verd. <br><br> No esperis més, crea el teu perfil i registra't!</h4>
+				<input id="registerB" class="loginButton" type="submit" value="Crear perfil">
+			</form>
+		</div>
+
+		<div class="overlay" id="consum-box">
+			<img id="closeC" src="./img/closeC.png" alt="Close"
+								onmouseover="this.src='./img/closeCHover.png';"
+								onmouseout="this.src='./img/closeC.png';"/>
+			<br>
+			<form action="Perfil.html">
+				<h4 style="text-decoration: none; padding-top: 0.5em;">Per veure amb detall el teu consum actual has de crear un perfil de la teva llar. <br><br> Si, a més, vols mantenir un control sobre el teu consum de manera regular i poder fer comparacions sobre les teves dades, no oblidis registrar-te! </h4>
+				<input id="consum" class="loginButton" type="submit" value="Crear perfil">
+			</form>
+		</div>
+		
+		<section>
+			<table class="devInfo">
+				<tr>
+					<td id="leftSpace3">
+					</td>
+					<td id="device">
+						<img id="devImg" src="./img/Login.png" alt="Aparell" style="height:4em;"/>
+					</td>
+					<td id="info">
+						<p id="info1">Utilitzes XXX XX hores aXXXXX.</p>
+						<p id="info2">X hores XX que la mitjana!</p>
+					</td>
+					<td id="rightSpace3">
+					</td>
+				</tr>
+			</table>
+
+			<p id="info3">La majoria de XXX si s'utilitzaren X hores aXXXXX consumirien
+				XKw,<br>el X% del consum mitjà setmanal d'una vivenda!</p>
+				
+			<p id="title4">Consells per reduir el consum</p>
+			
+			<table class="advice">
+				<tr>
+					<td id="adv1">
+						<p id="adv1T">XXX</p>
+						<img id="adv1I" src="./img/Login.png" alt="Consell 1" style="height:6em;"/>
+					</td>
+					<td id="adv2">
+						<p id="adv2T">XXX</p>
+						<img id="adv2I" src="./img/Login.png" alt="Consell 2" style="height:6em;"/>
+					</td>
+					<td id="adv3">
+						<p id="adv3T">XXX</p>
+						<img id="adv3I" src="./img/Login.png" alt="Consell 3" style="height:6em;"/>
+					</td>
+				</tr>
+			</table>
+
+			<table class="nextBack">
+				<tr>
+					<td id="leftSpace2">
+					</td>
+					<td id="backButton">
+						<a href="ConsumAparell1.html">Canviar d'aparell</a>
+					</td>
+					<td id="centerSpace2">
+					</td>
+					<td id="nextButton">
+						<a href="HomePage.html">Pàgina principal</a>
+					</td>
+					<td id="rightSpace2">
+					</td>
+				</tr>
+			</table>
+
+		</section>
+
+		<footer>
+			<p>&#169 2016 Control Consum</p>
+		</footer>
+
+	</body>
+
+</html>

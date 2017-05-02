@@ -1,0 +1,205 @@
+/**** Body ****/
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/**** Header (Navigation Bar) ****/
+header {
+	margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+header table tr td {
+	text-align: center;
+}
+
+.menuButton{
+	background-color: pink;
+	border: 0.15em solid black;
+	width: 8em;
+	height: 3em;
+}
+
+.menuButton a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+}
+
+#perfil{
+	background-color: #CDE3F5;
+	border: 0.15em solid #85AFD2;
+	cursor: pointer;
+}
+
+#perfil:hover {
+	background-color: #9DC2E0;
+}
+
+#consum{
+	background-color: #FFDBBE;
+	border: 0.15em solid #B2733F;
+}
+
+#consum:hover {
+	background-color: #CE9668;
+}
+
+#verd{
+	background-color: #C7E5AA;
+	border: 0.15em solid #6BA038;
+	cursor: pointer;
+}
+
+#verd:hover {
+	background-color: #8AB95D;
+}
+
+#logo{
+	height: 3em;
+	width: 8em;
+}
+
+#login{
+	height: 3em;
+	width: 3em;
+	cursor: pointer;
+}
+
+.overlay{
+    padding: 1em 1em 0.5em 1em;
+    border: 0.2em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 8em;
+  	height: 5em;
+  	background-color: #E4F0FB;
+  	border-radius: 2%;
+  	text-align:center;
+}
+
+#idUser{
+	margin: 0;
+	padding-top: 0.3em;
+    border: 0.15em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 3em;
+  	height: 1.8em;
+  	background-color: #E4F0FB;
+  	border-radius: 40%;
+  	text-align: center;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1em;
+}
+
+
+.logoutButton {
+	border: 0.15em solid #85AFD2;
+	background-color: #CDE3F5;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0.2em 0.3em 0.2em 0.3em;
+	cursor: pointer;	
+	height: 100%;
+	margin-top: 1.5em;
+}
+
+.logoutButton:hover {
+	background-color: #9DC2E0;
+}
+
+#aparell{
+	background-color: #C7E5AA;
+	border: 0.15em solid #6BA038;
+	cursor: pointer;
+	width: 9em;
+	height: 4em;
+}
+
+#aparell:hover {
+	background-color: #8AB95D;
+}
+
+#aparellDiv{
+	border: none; 
+	display: inline-block; 
+	width: 41%; 
+	text-align: center; 
+	padding: 0; 
+	margin-left: 3em;
+}
+
+/**** Section ****/
+table {
+	width: 100%;
+}
+ 
+h3 {
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	display: inline-block;
+	margin: 0.8em 0em 0.5em 0.5em;
+}
+
+h4 {
+	font-family: "Arial", "Gadget", "sans-serif";
+	margin-top: 1em;
+}
+
+div {
+	border: 0.2em solid black;
+	padding-right: 0.5em;
+	padding-left: 0.5em;
+	display: inline-block;
+	float: left;
+	width: 30%;	
+	height: 100%;
+	margin-left: 4em;
+	margin-bottom: 2em;
+	margin-top: 0;
+}
+
+.moreInfo {
+	margin: 0.8em 0.5em 0.5em 0em;
+	float: right;
+	width: 7em;
+	height: 2.5em;
+}
+
+.moreInfo a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1.2em;
+	height: 100%;
+	cursor: pointer;
+}
+
+figure {
+	margin: 0em 0.1em 0.4em 0.1em;
+	width: 100%;
+}
+
+/**** Footer ****/
+footer {
+	margin: 0.5em 4em 0.5em 4em;
+	clear: both;
+}
+
+footer p {
+	color: black;
+	text-align: right;
+}

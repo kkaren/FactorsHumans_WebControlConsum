@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Control Consum - Consum d'un aparell</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="./style/stylesConsumAparell4.css"/>
+		<script src="./code/jquery-1.12.3.js"></script>
+		<script type="text/JavaScript" src="./code/codeConsumAparell4.js"></script>
+	</head>
+
+	<body onload="Log()">
+	<script type="text/JavaScript" src="./code/codeLogout.js"></script>
+		<header>
+			<table>
+				<tr>
+					<td style="width:4%;">
+					</td>
+					<td id="logo" style="width:5%;">
+						<a onclick="passLogHome()">
+							<img src="./img/Title.png" alt="Control Consum Logo" style="height:3em; cursor: pointer;"/>
+						</a>
+					</td>
+					<td style="width:10%;">
+					</td>
+					<td id = "perfil" class="menuButton">
+						<a onclick="passLogPerfil()">Perfil</a>
+					</td>
+					<td id = "consum" class="menuButton">
+						<a href="Consum.html">Consum</a>
+					</td>
+					<td id = "verd" class="menuButton">
+						<a onclick="passLogVerd()">Compromís<br>Energètic</a>
+					</td>
+					<td style="width: 5em; height: 3em;">
+							<img id="login" src="./img/Login.png" alt="Login"
+								onmouseover="this.src='./img/LoginHover.png';"
+								onmouseout="this.src='./img/Login.png';"/>
+					</td>
+					<td style="width:2%;">
+					</td>
+					<div style="width: 4em;" id="idUser"> User </div>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td id="leftSpace">
+					</td>
+					<td class="subMenuButton">
+						<a href="ComportamentVerd.html">Comportament verd</a>
+					</td>
+					<td class="subMenuButton active1">
+						<a href="ConsumAparell4.html">Consum d'un aparell</a>
+					</td>
+					<td id="rightSpace">
+					</td>
+				</tr>
+			</table>
+		</header>
+		
+		<div class="overlay" id="logout-box">
+			<form action="HomePage.html">
+				<a class="logoutButton" href="Dashboard.html">Vista general</a>
+				<input class="logoutButton" type="submit" value="Tancar sessió">
+			</form>
+		</div>
+		
+		<section>
+
+			<p>Selecciona un aparell<p>
+
+			<table class="rooms">
+				<tr>
+					<td>
+						<p>Cuina</p>
+						<table id="cuinaT" background="./img/hab/cuinaVF.png">
+							<tr>
+								<td>
+									<p>Bombeta</p>
+									<img id="bombeta1" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"
+										onclick="changeBombeta1()"
+										onmouseover="mouseOverBombeta1()"
+										onmouseout="mouseOutBombeta1()"/>
+								</td>
+								<td>
+									<p>Nevera</p>
+									<img id="nevera" src="./img/dev/neveraV.png" alt="Nevera" style="height:4em;"
+										onclick="changeNevera()"
+										onmouseover="mouseOverNevera()"
+										onmouseout="mouseOutNevera()"/>
+								</td>
+								<td>
+									<p>Rentadora</p>
+									<img id="rentadora" src="./img/dev/rentadoraV.png" alt="Rentadora" style="height:4em;"
+										onclick="changeRentadora()"
+										onmouseover="mouseOverRentadora()"
+										onmouseout="mouseOutRentadora()"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Rentaplats</p>
+									<img id="rentaplats" src="./img/dev/rentaplatsV.png" alt="Rentaplats" style="height:4em;"
+										onclick="changeRentaplats()"
+										onmouseover="mouseOverRentaplats()"
+										onmouseout="mouseOutRentaplats()"/>
+								</td>
+								<td>
+									<p>Aire condicionat</p>
+									<img id="aire" src="./img/dev/aireV.png" alt="Aire condicionat" style="height:4em;"
+										onclick="changeAire()"
+										onmouseover="mouseOverAire()"
+										onmouseout="mouseOutAire()"/>
+								</td>
+								<td>
+									<p>Forn</p>
+									<img id="forn" src="./img/dev/fornV.png" alt="Forn" style="height:4em;"
+										onclick="changeForn()"
+										onmouseover="mouseOverForn()"
+										onmouseout="mouseOutForn()"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Microones</p>
+									<img id="microones" src="./img/dev/microonesV.png" alt="Microones" style="height:4em;"
+										onclick="changeMicroones()"
+										onmouseover="mouseOverMicroones()"
+										onmouseout="mouseOutMicroones()"/>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<p>Lavabo</p>
+						<table id="lavaboT" background="./img/hab/lavaboVF.png">
+							<tr>
+								<td>
+									<p>Bombeta</p>
+									<img id="bombeta2" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"
+										onclick="changeBombeta2()"
+										onmouseover="mouseOverBombeta2()"
+										onmouseout="mouseOutBombeta2()"/>
+								</td>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<p>Dormitori 1</p>
+						<table id="dorm1T" background="./img/hab/dormitoriVF.png">
+							<tr>
+								<td>
+									<p>Bombeta</p>
+									<img id="bombeta3" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"
+										onclick="changeBombeta3()"
+										onmouseover="mouseOverBombeta3()"
+										onmouseout="mouseOutBombeta3()"/>
+								</td>
+								<td>
+									<p>Ordinador</p>
+									<img id="pc" src="./img/dev/pcV.png" alt="Ordinador" style="height:4em;"
+										onclick="changePc()"
+										onmouseover="mouseOverPc()"
+										onmouseout="mouseOutPc()"/>
+								</td>
+								<td >
+									<p>Aire condicionat</p>
+									<img id="aire2" src="./img/dev/aireV.png" alt="Aire condicionat" style="height:4em;"
+										onclick="changeAire2()"
+										onmouseover="mouseOverAire2()"
+										onmouseout="mouseOutAire2()"/>
+								</td>
+							</tr>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							<tr>
+							</tr>
+							<tr>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Dormitori 2</p>
+						<table id="dorm2T" background="./img/hab/dormitoriVF.png">
+							<tr>
+								<td>
+									<p>Bombeta</p>
+									<img id="bombeta4" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"
+										onclick="changeBombeta4()"
+										onmouseover="mouseOverBombeta4()"
+										onmouseout="mouseOutBombeta4()"/>
+								</td>
+								<td>
+									<p>Aire condicionat</p>
+									<img id="aire3" src="./img/dev/aireV.png" alt="Aire condicionat" style="height:4em;"
+										onclick="changeAire3()"
+										onmouseover="mouseOverAire3()"
+										onmouseout="mouseOutAire3()"/>
+								</td>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<p>Dormitori 3</p>
+						<table id="dorm3T" background="./img/hab/dormitoriVF.png">
+							<tr>
+								<td>
+									<p>Bombeta</p>
+									<img id="bombeta5" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"
+										onclick="changeBombeta5()"
+										onmouseover="mouseOverBombeta5()"
+										onmouseout="mouseOutBombeta5()"/>
+								</td>
+								<td>
+									<p>Aire condicionat</p>
+									<img id="aire4" src="./img/dev/aireV.png" alt="Aire condicionat" style="height:4em;"
+										onclick="changeAire4()"
+										onmouseover="mouseOverAire4()"
+										onmouseout="mouseOutAire4()"/>
+								</td>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<p>Sala/Menjador</p>
+						<table id="menjT" background="./img/hab/salaVF.png">
+							<tr>
+								<td>
+									<p>Bombeta</p>
+									<img id="bombeta6" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"
+										onclick="changeBombeta6()"
+										onmouseover="mouseOverBombeta6()"
+										onmouseout="mouseOutBombeta6()"/>
+								</td>
+								<td>
+									<p>Televisió</p>
+									<img id="tele" src="./img/dev/teleV.png" alt="Televisió" style="height:4em;"
+										onclick="changeTele()"
+										onmouseover="mouseOverTele()"
+										onmouseout="mouseOutTele()"/>
+								</td>
+								<td>
+									<p>Videoconsola</p>
+									<img id="consola" src="./img/dev/consolaV.png" alt="Videoconsola" style="height:4em;"
+										onclick="changeConsola()"
+										onmouseover="mouseOverConsola()"
+										onmouseout="mouseOutConsola()"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Router WiFi</p>
+									<img id="router" src="./img/dev/routerV.png" alt="Router WiFi" style="height:4em;"
+										onclick="changeRouter()"
+										onmouseover="mouseOverRouter()"
+										onmouseout="mouseOutRouter()"/>
+								</td>
+								<td>
+									<p>Aire condicionat</p>
+									<img id="aire5" src="./img/dev/aireV.png" alt="Aire condicionat" style="height:4em;"
+										onclick="changeAire5()"
+										onmouseover="mouseOverAire5()"
+										onmouseout="mouseOutAire5()"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="invisible">
+									<p>Bombeta</p>
+									<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"/>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+
+		</section>
+
+		<footer>
+			<p>&#169 2016 Control Consum</p>
+		</footer>
+
+	</body>
+
+</html>

@@ -1,0 +1,541 @@
+/**** Body ****/
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/**** Header (Navigation Bar) ****/
+header {
+	margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+header table {
+	table-layout: auto;
+}
+
+header table tr td {
+	text-align: center;
+}
+
+.menuButton {
+	border: 0.15em solid black;
+	width: 8em;
+	height: 3em;
+}
+
+.menuButton a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+}
+
+#perfil{
+	background-color: #CDE3F5;
+	border: 0.15em solid #85AFD2;
+}
+
+#perfil:hover {
+	background-color: #9DC2E0;
+}
+
+#consum{
+	margin-top: 0;
+	background-color: #FFDBBE;
+	border: 0.15em solid #B2733F;
+	cursor: pointer;
+}
+
+#consum:hover {
+	background-color: #CE9668;
+}
+
+#verd{
+	background-color: #8AB95D;
+	border: 0.15em solid #6BA038;
+}
+
+#verd:hover {
+	background-color: #8AB95D;
+}
+
+#logo {
+	height: 3em;
+	width: 8em;
+}
+
+#login{
+	height: 3em;
+	width: 3em;
+	cursor: pointer;
+}
+
+.overlay {
+    padding: 0 1em 0.5em 1em;
+    border: 0.2em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 11em;
+  	height: 13em;
+  	background-color: #E4F0FB;
+  	border-radius: 2%;
+  	text-align:center;
+}
+
+#warning-box{
+	border: 0.15em solid #6BA038;
+	background-color: #D9ECC7;
+	width: 15em; 
+	height: 16em; 
+}
+
+#registerB{
+	margin-top: 0;
+	background-color: #C7E5AA;
+	border: 0.15em solid #6BA038;
+}
+
+#registerB:hover{
+	background-color: #8AB95D;
+}
+
+#consum-box{
+	background-color: #FFE9D7; 
+	border: 0.15em solid #B2733F;	
+	width: 15em; 
+	height: 17em; 
+}
+
+#close{
+	width: 1.15em; 
+	height: 1.15em;
+	margin-top: 1em;
+	float: right;
+	cursor: pointer;
+}
+
+#closeC{
+	width: 1.15em; 
+	height: 1.15em;
+	margin-top: 1em;
+	float: right;
+	cursor: pointer;
+}
+
+h4 {
+	font-family: "Arial", "Gadget", "sans-serif";
+	text-decoration: underline;
+}
+
+.textBoxLog{
+	float: left;
+	border: 0.15em solid black;
+	font-family: "Arial", "Gadget", "sans-serif";
+	font-size: 1em;
+	width: 80%;
+	height: 100%;
+	margin: 2em 0.8em 0em 0.8em;
+}
+
+.loginButton {
+	border: 0.15em solid #85AFD2;
+	background-color: #CDE3F5;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0.2em 0.3em 0.2em 0.3em;
+	cursor: pointer;	
+	height: 100%;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.loginButton:hover {
+	background-color: #9DC2E0;
+}
+
+.subMenuButton {
+	background-color: #C7E5AA;
+	border: 0.15em solid #6BA038;
+	width: 8em;
+	height: 2em;
+	padding: 0;
+	cursor: pointer;
+}
+
+.subMenuButton a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+	font-size: 0.8em;
+}
+
+.subMenuButton:hover {
+	background-color: #8AB95D;
+}
+
+.subMenuButton.active1 {
+	background-color: #8AB95D;
+}
+
+#leftSpace {
+	height: 2em;
+	width: 28em;
+}
+
+#rightSpace {
+	height: 2em;
+	width: 10em;
+}
+
+table {
+	width: 100%;
+}
+
+
+/**** Section ****/
+section {
+	margin: 0.5em 4em 0.5em 4em;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	border: 0.2em solid #6BA038;
+	background-color: rgba(217, 236, 199, 0.25);
+}
+
+section div{
+	text-align: center;
+}
+
+#devName{
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.8em;
+}
+
+#instruction{
+	text-align: center;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1.2em;
+}
+
+#range{
+	padding: 0em 0em 1em 0em;
+}
+
+#range span{
+	display: inline-block;
+	padding: 0em 1em 0em 1em;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1.2em;
+	vertical-align: middle;
+}
+
+#leftdiv{
+	width: 1em;
+}
+
+#r1{
+	width: 1em;
+}
+
+#timeRange{
+	width: 1em;
+}
+
+#r2{
+	width: 1em;
+}
+
+#rightdiv{
+	width: 1em;
+}
+
+/*****/
+
+#currentTime {
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1.2em;
+}
+
+.time {
+	padding: 0em 5em 0em 5em;
+	text-align: center;
+}
+
+#leftSpace3 {
+	height: 3em;
+	width: 14em;
+}
+
+#rightSpace3 {
+	height: 3em;
+	width: 10em;
+}
+
+#dayBtd {
+	width: 6em;
+}
+
+#dayB {
+	background-color: #8AB95D;
+	border: 0.2em solid #6BA038;
+	height: 2em;
+	font-size: 0.6em;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dayB p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+	font-size: 1.2em;
+}
+
+#dayB:hover {
+	background-color: #8AB95D;
+	cursor: pointer;
+}
+
+#weekBtd {
+	width: 6em;
+}
+
+#weekB {
+	background-color: #C7E5AA;
+	border: 0.2em solid #6BA038;
+	height: 2em;
+	font-size: 0.6em;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#weekB p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+	font-size: 1.2em;
+}
+
+#weekB:hover {
+	background-color: #8AB95D;
+	cursor: pointer;
+}
+
+#infoB {
+	width: 3em;
+	height: 3em;
+}
+
+/*** Pop-up help ***/
+/* http://creativeindividual.co.uk/2011/02/create-a-pop-up-div-in-jquery/ */
+#pop-up {
+  display: none;
+  position: absolute;
+  width: 12em;
+  padding: 1em;
+  background: #D9ECC7;
+  color: black;
+  border: 0.15em solid #6BA038;
+  font-size: 0.7em;
+  font-family: "Arial Black", "Gadget", "sans-serif";
+  border-radius: 5%;
+  text-align: justify;
+}
+
+/*****/
+
+.nextBack {
+	padding: 0.5em 0em 0.5em 0em;
+}
+
+#nextButton {
+	background-color: #C7E5AA;
+	border: 0.25em solid #6BA038;
+	width: 6em;
+	height: 2em;
+	font-size: 0.6em;
+}
+
+#nextButton a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+	font-size: 1.2em;
+}
+
+#nextButton:hover {
+	background-color: #8AB95D;
+}
+
+#backButton {
+	background-color: #C7E5AA;
+	border: 0.25em solid #6BA038;
+	width: 6em;
+	height: 2em;
+	font-size: 0.6em;
+}
+
+#backButton a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+	font-size: 1.2em;
+}
+
+#backButton:hover {
+	background-color: #8AB95D;
+}
+
+#leftSpace2 {
+	height: 3em;
+	width: 0.05em;
+}
+
+#centerSpace2 {
+	height: 3em;
+	width: 20em;
+}
+
+#rightSpace2 {
+	height: 3em;
+	width: 0.05em;
+}
+
+
+/**** Footer ****/
+footer {
+	margin: 0.5em 4em 0.5em 4em;
+	clear: both;
+}
+
+footer p {
+	color: black;
+	text-align: right;
+}
+
+
+/**** Range ****/
+/* http://danielstern.ca/range.css/#/ */
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 50em;
+  margin: 16px 0;
+  text-align:center;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 0.5px 0.5px 3px #000000, 0px 0px 0.5px #0d0d0d;
+  background: #c7e5aa;
+  border-radius: 2.5px;
+  border: 1px solid #6ba038;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0.5px 0.5px 3px #000000, 0px 0px 0.5px #0d0d0d;
+  border: 2px solid #6ba038;
+  height: 42px;
+  width: 20px;
+  border-radius: 5px;
+  background: #8ab95d;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -17px;
+}/*
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}*/
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 0.5px 0.5px 3px #000000, 0px 0px 0.5px #0d0d0d;
+  background: #c7e5aa;
+  border-radius: 2.5px;
+  border: 1px solid #6ba038;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0.5px 0.5px 3px #000000, 0px 0px 0.5px #0d0d0d;
+  border: 2px solid #6ba038;
+  height: 42px;
+  width: 20px;
+  border-radius: 5px;
+  background: #8ab95d;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #82c541;
+  border: 1px solid #6ba038;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 3px #000000, 0px 0px 0.5px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #c7e5aa;
+  border: 1px solid #6ba038;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 3px #000000, 0px 0px 0.5px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0.5px 0.5px 3px #000000, 0px 0px 0.5px #0d0d0d;
+  border: 2px solid #6ba038;
+  height: 42px;
+  width: 20px;
+  border-radius: 5px;
+  background: #8ab95d;
+  cursor: pointer;
+  height: 10px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #c7e5aa;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #ffffff;
+}

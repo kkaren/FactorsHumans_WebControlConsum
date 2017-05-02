@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Control Consum - Consum d'un aparell</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="./style/stylesConsumAparell1.css"/>
+		<script src="./code/jquery-1.12.3.js"></script>
+		<script type="text/JavaScript" src="./code/codeConsumAparell1.js"></script>
+	</head>
+
+	<body>
+	<script type="text/JavaScript" src="./code/codeLogin.js"></script>
+		<header>
+			<table>
+				<tr>
+					<td style="width:4%;">
+					</td>
+					<td id="logo" style="width:5%;">
+						<a onclick="passLogHome()">
+							<img src="./img/Title.png" alt="Control Consum Logo" style="height:3em; cursor: pointer;"/>
+						</a>
+					</td>
+					<td style="width:10%;">
+					</td>
+					<td id = "perfil" class="menuButton">
+						<a href="Perfil.html">Perfil</a>
+					</td>
+					<td id = "consum" class="menuButton">
+						<a>Consum</a>
+					</td>
+					<td id = "verd" class="menuButton">
+						<a href="CompromisEnergetic.html">Compromís<br>Energètic</a>
+					</td>
+					<td style="width: 5em; height: 3em;">
+							<img id="login" src="./img/Login.png" alt="Login"
+								onmouseover="this.src='./img/LoginHover.png';"
+								onmouseout="this.src='./img/Login.png';"/>
+					</td>
+					<td style="width:2%;">
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td id="leftSpace">
+					</td>
+					<td id="verdB" class="subMenuButton">
+						<a>Comportament verd</a>
+					</td>
+					<td class="subMenuButton active1">
+						<a href="ConsumAparell1.html">Consum d'un aparell</a>
+					</td>
+					<td id="rightSpace">
+					</td>
+				</tr>
+			</table>
+		</header>
+
+		<div class="overlay" id="login-box">
+			<form action="JavaScript:checkInput();">
+				<h4>Identifica't</h4>
+				<input style="margin-top: 0.1em;" class="textBoxLog" type="text" id="user" placeholder="Usuari">
+				<input class="textBoxLog" type="password" id="password" placeholder="Contrasenya">
+				<a class="loginButton" href="Perfil.html">Crear perfil</a>
+				<input class="loginButton" type="submit" value="Entrar">
+			</form>
+		</div>
+		
+		<div class="overlay" id="warning-box">
+			<img id="close" src="./img/close.png" alt="Close"
+								onmouseover="this.src='./img/closeHover.png';"
+								onmouseout="this.src='./img/close.png';"/>
+			<br>
+			<form action="Perfil.html">
+				<h4 style="text-decoration: none; padding-top: 0.5em;">Necessites tenir un perfil registrat per poder comparar el teu consum amb la mitjana i descobrir
+				si el teu comportament és verd. <br><br> No esperis més, crea el teu perfil i registra't!</h4>
+				<input id="registerB" class="loginButton" type="submit" value="Crear perfil">
+			</form>
+		</div>
+
+		<div class="overlay" id="consum-box">
+			<img id="closeC" src="./img/closeC.png" alt="Close"
+								onmouseover="this.src='./img/closeCHover.png';"
+								onmouseout="this.src='./img/closeC.png';"/>
+			<br>
+			<form action="Perfil.html">
+				<h4 style="text-decoration: none; padding-top: 0.5em;">Per veure amb detall el teu consum actual has de crear un perfil de la teva llar. <br><br> Si, a més, vols mantenir un control sobre el teu consum de manera regular i poder fer comparacions sobre les teves dades, no oblidis registrar-te! </h4>
+				<input id="consum" class="loginButton" type="submit" value="Crear perfil">
+			</form>
+		</div>
+		
+		<section>
+
+			<p>Selecciona un aparell<p>
+
+			<table class="devices">
+				<tr>
+					<td>
+						<p>Aire condicionat</p>
+						<img id="aire" src="./img/dev/aireV.png" alt="Aire condicionat" style="height:4em;"
+							onclick="changeAire()"
+							onmouseover="mouseOverAire()"
+							onmouseout="mouseOutAire()"/>
+					</td>
+					<td>
+						<p>Bombeta</p>
+						<img id="bombeta" src="./img/dev/bombetaV.png" alt="Bombeta" style="height:4em;"
+							onclick="changeBombeta()"
+							onmouseover="mouseOverBombeta()"
+							onmouseout="mouseOutBombeta()"/>
+					</td>
+					<td>
+						<p>Forn</p>
+						<img id="forn" src="./img/dev/fornV.png" alt="Forn" style="height:4em;"
+							onclick="changeForn()"
+							onmouseover="mouseOverForn()"
+							onmouseout="mouseOutForn()"/>
+					</td>
+					<td>
+						<p>Microones</p>
+						<img id="microones" src="./img/dev/microonesV.png" alt="Microones" style="height:4em;"
+							onclick="changeMicroones()"
+							onmouseover="mouseOverMicroones()"
+							onmouseout="mouseOutMicroones()"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Nevera</p>
+						<img id="nevera" src="./img/dev/neveraV.png" alt="Nevera" style="height:4em;"
+							onclick="changeNevera()"
+							onmouseover="mouseOverNevera()"
+							onmouseout="mouseOutNevera()"/>
+					</td>
+					<td>
+						<p>Ordinador</p>
+						<img id="pc" src="./img/dev/pcV.png" alt="Ordinador" style="height:4em;"
+							onclick="changePc()"
+							onmouseover="mouseOverPc()"
+							onmouseout="mouseOutPc()"/>
+					</td>
+					<td>
+						<p>Rentadora</p>
+						<img id="rentadora" src="./img/dev/rentadoraV.png" alt="Rentadora" style="height:4em;"
+							onclick="changeRentadora()"
+							onmouseover="mouseOverRentadora()"
+							onmouseout="mouseOutRentadora()"/>
+					</td>
+					<td>
+						<p>Rentaplats</p>
+						<img id="rentaplats" src="./img/dev/rentaplatsV.png" alt="Rentaplats" style="height:4em;"
+							onclick="changeRentaplats()"
+							onmouseover="mouseOverRentaplats()"
+							onmouseout="mouseOutRentaplats()"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Router WiFi</p>
+						<img id="router" src="./img/dev/routerV.png" alt="Router WiFi" style="height:4em;"
+							onclick="changeRouter()"
+							onmouseover="mouseOverRouter()"
+							onmouseout="mouseOutRouter()"/>
+					</td>
+					<td>
+						<p>Televisió</p>
+						<img id="tele" src="./img/dev/teleV.png" alt="Televisió" style="height:4em;"
+							onclick="changeTele()"
+							onmouseover="mouseOverTele()"
+							onmouseout="mouseOutTele()"/>
+					</td>
+					<td>
+						<p>Videoconsola</p>
+						<img id="consola" src="./img/dev/consolaV.png" alt="Videoconsola" style="height:4em;"
+							onclick="changeConsola()"
+							onmouseover="mouseOverConsola()"
+							onmouseout="mouseOutConsola()"/>
+					</td>
+					<td>
+						<br><br>
+						<img id="trigger" src="./img/moreV.png" alt="More" style="height:2.6em;"/>
+					</td>
+				</tr>
+			</table>
+			
+			<div id="pop-up">
+				<div style="text-align:right">
+					<img id = "closeD" src="./img/close.png" alt="Close" style="height:1.2em; position:right;"
+						onmouseover="this.src='./img/closeHover.png';"
+						onmouseout="this.src='./img/close.png';"/>
+				</div>
+				<h3 id="modText">No trobes l'aparell <br>que busques?</h3>
+      			<form id="sendDevice" action="javascript:void(0);">
+					<h4 style="font-size: 0.9em; text-decoration: none;">Indica'ns quin és:</h4>
+					<input id="apTB" class="textBox" type="text" name="aparell" placeholder="*Aparell Elèctric">
+					<h4 style="font-size: 0.6em; margin-left: 9em; text-decoration: none;">*Camp obligatori</h4>
+					<h4 style="font-size: 0.9em; text-decoration: none;">Si vols, t'avisarem per correu quan estiqui disponible:</h4>
+					<input class="textBox" id="mail" type="text" name="email" placeholder="Email"><br><br>
+					<input class="sendB" type="submit" value="Enviar">
+				</form>
+    		</div>
+
+		</section>
+
+		<footer>
+			<p>&#169 2016 Control Consum</p>
+		</footer>
+
+	</body>
+
+</html>

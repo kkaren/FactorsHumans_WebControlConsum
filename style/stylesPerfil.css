@@ -1,0 +1,661 @@
+/**** Body ****/
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/**** Header (Navigation Bar) ****/
+header {
+	margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+header table {
+	table-layout: auto;
+}
+
+header table tr td {
+	text-align: center;
+}
+
+.menuButton{
+	border: 0.15em solid black;
+	width: 8em;
+	height: 3em;
+}
+
+.menuButton a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+}
+
+.menuButton:hover{
+	background-color: purple;
+}
+
+
+#perfil{
+	background-color: #9DC2E0;
+	border: 0.15em solid #85AFD2;
+	cursor: pointer;
+}
+
+#perfil:hover {
+	background-color: #9DC2E0;
+}
+
+#consum{
+	margin-top: 0;
+	background-color: #FFDBBE;
+	border: 0.15em solid #B2733F;
+	cursor: pointer;
+}
+
+#consum:hover {
+	background-color: #CE9668;
+}
+
+#verd{
+	background-color: #C7E5AA;
+	border: 0.15em solid #6BA038;
+	cursor: pointer;
+}
+
+#verd:hover {
+	background-color: #8AB95D;
+}
+
+#logo {
+	height: 3em;
+	width: 8em;
+}
+
+#login{
+	height: 3em;
+	width: 3em;
+	cursor: pointer;
+}
+
+/* Login box */
+.overlayLogin {
+    padding: 0 1em 0.5em 1em;
+    border: 0.2em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 11em;
+  	height: 13em;
+  	background-color: #E4F0FB;
+  	border-radius: 2%;
+  	text-align:center;
+}
+
+#logout-box{
+	padding-top: 1em;
+	width: 8em;
+	height: 5em;
+}
+
+#idUser{
+	margin: 0;
+	padding-top: 0.3em;
+    border: 0.15em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 3em;
+  	height: 1.8em;
+  	background-color: #E4F0FB;
+  	border-radius: 40%;
+  	text-align: center;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1em;
+}
+
+h3{
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	margin: 0;
+	font-size: 1em;
+	padding: 0.8em 0 0 0;
+}
+
+h4 {
+	font-family: "Arial", "Gadget", "sans-serif";
+}
+
+.textBoxLog{
+	float: left;
+	border: 0.15em solid black;
+	font-family: "Arial", "Gadget", "sans-serif";
+	font-size: 1em;
+	width: 80%;
+	height: 100%;
+	margin: 2em 0.8em 0em 0.8em;
+}
+
+.loginButton {
+	border: 0.15em solid #85AFD2;
+	background-color: #CDE3F5;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0.2em 0.3em 0.2em 0.3em;
+	cursor: pointer;
+	height: 100%;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.loginButton:hover {
+	background-color: #9DC2E0;
+}
+
+
+#consum-box{
+	background-color: #FFE9D7;
+	border: 0.15em solid #B2733F;
+	width: 15em;
+	height: 21em;
+}
+
+#gotoCons{
+	background-color: #FFDBBE;
+	border: 0.15em solid #B2733F;
+	margin: 0;
+}
+
+#gotoCons:hover{
+	background-color: #CE9668;
+}
+
+#closeC{
+	width: 1.15em;
+	height: 1.15em;
+	margin-top: 1em;
+	float: right;
+	cursor: pointer;
+}
+
+table {
+	width: 100%;
+}
+
+/**** Section ****/
+section {
+	margin: 2.5em 4em 0.5em 4em;
+}
+
+#habitacions {
+	border: 0.2em solid #85AFD2;
+	width: 40em;
+	height: 30em;
+	background-color: #E4F0FB;
+	background-color: rgba(228, 240, 251, 0.25);
+	padding: 0em 0em 1em 0em;
+}
+
+#divScroll {
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+#habTM{
+	text-align:center;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	margin: 1em 0em 0em 0em;
+}
+
+
+#habTM p{
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1.2em;
+	text-align: center;
+	padding: 0em 1em 0em 4em;
+	width: 80%;
+}
+
+.roomsT{
+	text-align:center;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+}
+
+.roomName{
+	text-align: center;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1em;
+	border: 0.15em solid #85AFD2;
+	background-color: rgba(228, 240, 251, 0.05);
+	margin-top: 0.7em;
+	border-radius: 5%;
+	padding: 0.1em 0 0.2em 0;
+}
+
+.room{
+	text-align: center;
+}
+
+#cuinaT{
+	border: 0.15em solid #85AFD2;
+	text-align:center;
+	padding-bottom: 0.5em;
+	margin: 0em 1em 0em 1em;
+	width: 21em;
+	height: 21em;
+	background-image: url('../img/hab/CuinaPF.png');
+    background-size: 21em 21em;
+    background-repeat: no-repeat;
+    table-layout: fixed;
+}
+
+#cuinaT p{
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.7em;
+}
+
+#lavaboT{
+	border: 0.15em solid #85AFD2;
+	text-align:center;
+	padding-bottom: 0.5em;
+	margin: 0em 1em 0em 1em;
+	width: 21em;
+	height: 21em;
+	background-image: url('../img/hab/LavaboPF.png');
+    background-size: 21em 21em;
+    background-repeat: no-repeat;
+    table-layout: fixed;
+}
+
+#lavaboT p{
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.7em;
+}
+
+#dormT{
+	border: 0.15em solid #85AFD2;
+	text-align:center;
+	padding-bottom: 0.5em;
+	margin: 0em 1em 0em 1em;
+	width: 21em;
+	height: 21em;
+	background-image: url('../img/hab/DormitoriPF.png');
+    background-size: 21em 21em;
+    background-repeat: no-repeat;
+    table-layout: fixed;
+}
+
+#dormT p{
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.7em;
+}
+
+#sala1T{
+	border: 0.15em solid #85AFD2;
+	text-align:center;
+	padding-bottom: 0.5em;
+	margin: 0em 1em 0em 1em;
+	width: 21em;
+	height: 21em;
+	background-image: url('../img/hab/SalaPF.png');
+    background-size: 21em 21em;
+    background-repeat: no-repeat;
+    table-layout: fixed;
+}
+
+#sala1T p{
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.7em;
+}
+
+#extraT{
+	border: 0.15em solid #85AFD2;
+	text-align:center;
+	padding-bottom: 0.5em;
+	margin: 0em 1em 0em 1em;
+	width: 21em;
+	height: 21em;
+	background-image: url('../img/hab/salaPF.png');
+    background-size: 21em 21em;
+    background-repeat: no-repeat;
+    table-layout: fixed;
+}
+
+#extraT p{
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.7em;
+}
+
+.invisible{
+	visibility: hidden;
+}
+
+/***************************/
+
+#aparells {
+	border: 0.2em solid #85AFD2;
+	width: 24em;
+	height: 30em;
+	background-color:#E4F0FB;
+	background-color: rgba(228, 240, 251, 0.25);
+	vertical-align: top;
+}
+
+#apTM{
+	text-align:center;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	margin-top: 0.5em;
+}
+
+
+#apTM p{
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1.2em;
+	text-align: center;
+	padding: 0em 1em 0em 1em;
+}
+
+#moreA{
+	padding: 1.5em 0em 0em 0em;
+}
+
+.devices {
+	margin: 0.5em 0.5em 1.5em 0.5em;
+	table-layout: fixed;
+}
+
+.devices td{
+	padding: 0em 1em 0em 1em;
+	text-align: center;
+}
+
+.devices p {
+	text-align:center;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.7em;
+}
+
+.devices img:hover {
+	cursor: pointer;
+}
+
+/**** Dialeg aparells ****/
+.aparell-box{
+	padding: 0 1em 0.5em 1em;
+    border: 0.2em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	background-color: #E4F0FB;
+  	border-radius: 2%;
+  	text-align:center;
+	width: 15em;
+	height: 28em;
+}
+
+.time{
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+
+#ok{
+	border-radius: 10%;
+}
+
+#cancel{
+	border-radius: 10%;
+}
+
+#range{
+	padding: 1em 0em 0em 0em;
+}
+
+#range span{
+	display: inline-block;
+	padding: 0em 0.5em 0em 0.5em;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.8em;
+	vertical-align: middle;
+}
+
+#leftTab{
+	width: 0em;
+}
+
+#r1{
+	width: 1em;
+}
+
+#timeRange{
+	width: 3em;
+}
+
+#r2{
+	width: 1em;
+}
+
+#rightTab{
+	width: 0em;
+}
+
+#currentTime{
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1em;
+}
+
+/**** Sliders ****/
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 7.5px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #cde3f5;
+  border-radius: 0.8px;
+  border: 1px solid #85afd2;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 2px solid #85afd2;
+  height: 22px;
+  width: 14px;
+  border-radius: 3px;
+  background: #9dc2e0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8.5px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #cde3f5;
+  border-radius: 0.8px;
+  border: 1px solid #85afd2;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 2px solid #85afd2;
+  height: 22px;
+  width: 14px;
+  border-radius: 3px;
+  background: #9dc2e0;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #63a7e0;
+  border: 1px solid #85afd2;
+  border-radius: 1.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #cde3f5;
+  border: 1px solid #85afd2;
+  border-radius: 1.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 2px solid #85afd2;
+  height: 22px;
+  width: 14px;
+  border-radius: 3px;
+  background: #9dc2e0;
+  cursor: pointer;
+  height: 7px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #cde3f5;
+}
+
+/**** Afegir habitacions/aparells ****/
+#hab-box{
+	padding-top: 1em;
+	display: none;
+	width: 18em;
+	height: 9em;
+}
+
+/*** Pop-up help ***/
+/* http://creativeindividual.co.uk/2011/02/create-a-pop-up-div-in-jquery/ */
+#pop-up {
+  display: none;
+  position: absolute;
+  width: 12em;
+  padding: 1em;
+  background: #E4F0FB;
+  color: black;
+	border: 0.2em solid #85AFD2;
+  font-size: 0.7em;
+  font-family: "Arial Black", "Gadget", "sans-serif";
+  border-radius: 5%;
+  text-align: justify;
+}
+
+.taulaAddHab{
+	width: 50%;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	border: 0.15em solid #85AFD2;
+	background-color: #CDE3F5;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.9em;
+	text-decoration: none;
+	cursor: pointer;
+	height: 100%;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.taulaAddHab:hover {
+	background-color: #9DC2E0;
+}
+
+
+#addH{
+	border-radius: 10%;
+}
+
+#suprH{
+	border-radius: 10%;
+}
+
+#ap-box{
+	display: none;
+	position: absolute;
+	width: 13em;
+	height: 22em;
+	padding: 1em;
+	font-size: 1em;
+ 	text-align:center;
+}
+
+.textBox{
+	border: 0.15em solid black;
+	font-family: "Arial", "Gadget", "sans-serif";
+	font-size: 0.9em;
+	width: 80%;
+	height: 1.5em;
+}
+
+#closeD:hover {
+	cursor: pointer;
+}
+
+#leave-box{
+	width: 15em;
+	height: 14em;
+	padding-top: 1em;
+	padding-bottom: 1.5em;
+}
+
+#sortirB{
+	margin-top: 0.5em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+}
+
+#closeL{
+	width: 1.15em;
+	height: 1.15em;
+	float: right;
+	cursor: pointer;
+}
+
+#noMoreAp-box{
+	width: 10em;
+	height: 9em;
+}
+
+#noMoreHab-box{
+	width: 10em;
+	height: 8em;
+}
+
+#asterisc{
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.7em;
+	text-align: center;
+}
+/**** Footer ****/
+footer {
+	margin: 0.5em 4em 0.5em 4em;
+	clear: both;
+}
+
+footer p {
+	color: black;
+	text-align: right;
+}

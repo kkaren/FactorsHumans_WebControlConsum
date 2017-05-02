@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Control Consum - Comportament verd</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="./style/stylesComportament.css"/>
+		<script src="./code/jquery-1.12.3.js"></script>
+		<script type="text/JavaScript" src="./code/codeLogout.js"></script>
+	</head>
+
+	<body onload="Log()">
+		<header>
+			<table>
+				<tr>
+					<td style="width: 4%;"></td>
+					<td id="logo" style="width: 5%;">
+						<a onclick="passLogHome()">
+							<img src="./img/Title.png" alt="Control Consum Logo" style="height:3em; cursor: pointer;"/>
+						</a>
+					</td>
+					<td style="width: 10%;"></td>
+					<td id = "perfil" class="menuButton">
+						<a onclick="passLogPerfil()">Perfil</a>
+					</td>
+					<td id = "consum" class="menuButton">
+						<a href="Consum.html">Consum</a>
+					</td>
+					<td id = "verd" class="menuButton">
+						<a onclick="passLogVerd()">Compromís<br>Energètic</a>
+					</td>
+					<td style="width: 5em; height: 3em;">
+							<img id="login" src="./img/Login.png" alt="Login"
+								onmouseover="this.src='./img/LoginHover.png';"
+								onmouseout="this.src='./img/Login.png';"/>
+					</td>
+					<td style="width: 2%;"></td>
+					<div style="width: 2.4em;" id="idUser"> User </div>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td id="leftSpace">
+					</td>
+					<td class="subMenuButton active1">
+						<a href="ComportamentVerd.html">Comportament verd</a>
+					</td>
+					<td class="subMenuButton">
+						<a href="ConsumAparell4.html">Consum d'un aparell</a>
+					</td>
+					<td id="rightSpace">
+					</td>
+				</tr>
+			</table>
+		</header>
+		
+		<div class="overlay" id="logout-box">
+			<form action="HomePage.html">
+				<a class="logoutButton" href="Dashboard.html">Vista general</a>
+				<input class="logoutButton" type="submit" value="Tancar sessió">
+			</form>
+		</div>
+		
+		<section>
+			<div>
+				<h4 style="margin-top: 2em;">La gràfica lateral mostra el teu consum general actual respecte el consum mig d'una llar amb característiques semblants a la teva:
+					<br><br>
+					<ul>
+						<li>Nº d'habitants: 4</li>
+						<li>Nº d'habitacions: 6</li>
+						<li>Aparells similars</li>
+					</ul>
+				</h4>
+				<br>
+				<h4>El teu consum global és, actualment, 2'105 kW/h, en canvi, la mitjana en altres llars és 1'146 kW/h.</h4>
+				<br>
+				<table>
+					<tr>
+						<td style="width: 15%; padding-bottom: 1.5em;">
+							<img src="./img/signalB.png" alt="Warning" width="100%" style="margin-left: 2.5em;"/>
+						</td>
+						<td style="width: 85%; padding: 0;">
+							<h4 style="color: #6BA038; margin-left: 5em;">El teu consum energètic <br> sobrepassa la mitjana!</h4>
+						</td>
+					</tr>
+				</table>
+				<h4>Ves amb compte, i intenta reduir el teu consum, si vols ser més respectuós amb el medi ambient.</h4>
+			</div>
+			<div id="graf">
+				<figure>
+					<img src="./img/grComportResum.png" alt="Comportament" width="100%" style="border: 0.15em solid #6BA038; border-radius: 1%;"/>
+				</figure> 
+			</div>
+		</section>
+		<footer>
+			<p>&#169 2016 Control Consum</p>
+		</footer>
+
+	</body>
+
+</html>

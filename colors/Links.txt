@@ -1,0 +1,26 @@
+Perfil
+CLAR DEFINITIU
+http://paletton.com/#uid=13y0u0k7UUa3cZA5wXlaiQ5cFL3
+http://paletton.com/palette.php?uid=13y0u0k7UUa3cZA5wXlaiQ5cFL3
+CLAR
+http://paletton.com/#uid=13y0u0kaVz84jP27qHbeJtFiHpX
+http://paletton.com/palette.php?uid=13y0u0kaVz84jP27qHbeJtFiHpX
+FOSC
+http://paletton.com/#uid=13y0u0kbRt14+E48dwffUpTkImm
+http://paletton.com/palette.php?uid=13y0u0kbRt14%2BE48dwffUpTkImm
+
+Consum
+CLAR
+http://paletton.com/#uid=10u0u0kbRt14+E48dwffUpTkImm
+http://paletton.com/palette.php?uid=10u0u0kbRt14%2BE48dwffUpTkImm
+FOSC
+http://paletton.com/#uid=10u0u0kcglL4Zvw8Eq6eXhmkwen
+http://paletton.com/palette.php?uid=10u0u0kcglL4Zvw8Eq6eXhmkwen
+
+Verd
+CLAR
+http://paletton.com/#uid=12z0u0kbRt14+E48dwffUpTkImm
+http://paletton.com/palette.php?uid=12z0u0kbRt14%2BE48dwffUpTkImm
+FOSC
+http://paletton.com/#uid=12z0u0kcglL4Zvw8Eq6eXhmkwen
+http://paletton.com/palette.php?uid=12z0u0kcglL4Zvw8Eq6eXhmkwen

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Control Consum - Perfil</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="./style/stylesPerfil.css"/>
+	</head>
+
+	<body onload="isLogged()">
+	<script src="./code/jquery-1.12.3.js"></script>
+	<script type="text/JavaScript" src="./code/codePerfil.js"></script>
+	<script type="text/JavaScript" src="./code/codeLog-IN-OUT.js"></script>
+		<header>
+			<table>
+				<tr>
+					<td style="width:4%;">
+					</td>
+					<td id="logo" style="width:5%;">
+						<a>
+							<img src="./img/Title.png" alt="Control Consum Logo" style="height:3em; cursor: pointer;"/>
+						</a>
+					</td>
+					<td style="width:10%;">
+					</td>
+					<td id = "perfil" class="menuButton">
+						<a>Perfil</a>
+					</td>
+					<td id = "consum" class="menuButton">
+						<a>Consum</a>
+					</td>
+					<td id = "verd" class="menuButton">
+						<a>Compromís<br>Energètic</a>
+					</td>
+					<td style="width: 5em; height: 3em;">
+							<img id="login" src="./img/Login.png" alt="Login"
+								onmouseover="this.src='./img/LoginHover.png';"
+								onmouseout="this.src='./img/Login.png';"/>
+					</td>
+					<td style="width:2%;">
+					</td>
+					<div style="width: 4em;" id="idUser"> User </div>
+				</tr>
+			</table>
+		</header>
+		<div class="overlayLogin" id="noMoreAp-box">
+			<h4 style="padding-left: 0;"> No pots afegir més aparells en aquesta habitació! </h4>
+			<button id="okay" class="loginButton" style="padding: 0 1em 0 1em; margin: 0; height:20%;">D'acord</button>
+		</div>
+		<div class="overlayLogin" id="noMoreHab-box">
+			<h4 style="padding-left: 0;"> No pots afegir més habitacions! </h4>
+			<button id="okayH" class="loginButton" style="padding: 0 1em 0 1em; margin: 0; height:30%;">D'acord</button>
+		</div>
+		<div class="overlayLogin" id="login-box">
+			<form action="JavaScript:checkInput();">
+				<h4 style="text-decoration: underline;">Identifica't</h4>
+				<input style="margin-top: 0.1em;" class="textBoxLog" type="text" id="user" placeholder="Usuari">
+				<input class="textBoxLog" type="password" id="password" placeholder="Contrasenya">
+				<a class="loginButton" href="Perfil.html">Crear perfil</a>
+				<input class="loginButton" type="submit" value="Entrar">
+			</form>
+		</div>
+
+		<div class="overlayLogin" id="logout-box">
+			<form action="HomePage.html">
+				<a class="loginButton" href="Dashboard.html">Vista general</a>
+				<input class="loginButton" type="submit" value="Tancar sessió">
+			</form>
+		</div>
+
+		<div class="overlayLogin" id="leave-box">
+			<img id="closeL" src="./img/closeP.png" alt="Close"
+								onmouseover="this.src='./img/closePHover.png';"
+								onmouseout="this.src='./img/closeP.png';"/>
+			<br>
+			<form action="HomePage.html">
+				<h4 style="text-decoration: none; padding-left: 0;">El teu perfil no ha estat registrat, si surts ara es perdran les teves dades i aniràs a la pàgina principal. <br><br> Si estàs d'acord fes click a "Sortir", sinó REGISTRA'T!</h4>
+				<input id="sortirB" class="loginButton" type="submit" value="Sortir">
+			</form>
+		</div>
+
+		<div class="overlayLogin" id="consum-box">
+			<img id="closeC" src="./img/closeC.png" alt="Close"
+								onmouseover="this.src='./img/closeCHover.png';"
+								onmouseout="this.src='./img/closeC.png';"/>
+			<br>
+			<form action="ConsumNotReg.html">
+				<h4 style="padding-top: 0.4em;">Per veure amb detall el teu consum actual has de crear un perfil de la teva llar. <br><br> Si ja has creat el perfil, endavant: </h4>
+				<input id="gotoCons" class="loginButton" type="submit" value="Consultar consum">
+				<h4>Si, a més, vols mantenir un control sobre el teu consum de manera regular i poder fer comparacions sobre les teves dades, no oblidis registrar-te! </h4>
+
+			</form>
+		</div>
+		<div class="overlayLogin" id="hab-box" style="padding: 1em;">
+			<table style="width: 100%;">
+				<tr>
+					<td class="taulaAddHab" id="cuinaE">Cuina</td>
+					<td class="taulaAddHab" id="lavaboE">Lavabo</td>
+				</tr>
+				<tr>
+					<td class="taulaAddHab" id="salaE">Sala</td>
+					<td class="taulaAddHab" id="dormE">Dormitori</td>
+				</tr>
+			</table>
+			<table style="margin-top: 1.5em;">
+				<tr>
+					<td class="taulaAddHab" style="width: 40%;" id="suprH">Descartar</td>
+					<td style="width: 20%;"></td>
+					<td class="taulaAddHab" style="width: 40%;" id="addH">Afegir</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="overlayLogin" id="ap-box">
+			<div style="text-align: right">
+				<img id = "closeD" src="./img/closeP.png" alt="Close" style="height: 1.2em; position: right;"
+					onmouseover="this.src='./img/closePHover.png';"
+					onmouseout="this.src='./img/closeP.png';"/>
+			</div>
+			<h3 id="modText">No trobes l'aparell <br>que busques?</h3>
+      		<form id="sendDevice" action="javascript:void(0);">
+				<h4 style="font-size: 0.9em;">Indica'ns quin és:</h4>
+				<input id="apTB" class="textBox" type="text" name="aparell" placeholder="*Aparell Elèctric">
+				<h4 style="font-size: 0.6em; margin-left: 9em;">*Camp obligatori</h4>
+				<h4 style="font-size: 0.9em;">Si vols, t'avisarem per correu quan estiqui disponible:</h4>
+				<input class="textBox" type="text" name="email" placeholder="Email"><br><br>
+				<input class="loginButton" style="margin-top: 0.4em; padding: 0.3em 0.5em 0.3em 0.5em; font-size: 1em;" type="submit" value="Enviar">
+			</form>
+		</div>
+
+			<div class="aparell-box" id="aparell-box">
+
+				<h3 style="margin-top: 0.5em;">Temps d'ús:
+				<img id="trigger2" src="./img/infoP.png" alt="Info" style="width:1.5em; float:right;"
+						onmouseover="this.src='./img/infoPHover.png';"
+						onmouseout="this.src='./img/infoP.png';"/></h3>
+				<table id="range">
+					<tr>
+						<td id="leftTab"></td>
+						<td><span id="r1" title="0 dies">0h</span></td>
+						<td><input class ="timeRange" id="timeRangeid" type="range" oninput="updateTime(this.value)" value="12" min="0" max="24" step="0.5" /></td>
+						<td><span id="r2" title="1 dia">24h</span></td>
+						<td id="rightTab"></td>
+					</tr>
+				</table>
+
+				<div>
+					<span style="margin-top: -0.5em; margin-bottom: 0em;" id="currentTime" title="0.5 dies">12</span>
+				</div>
+
+				<div style="display: inline-block;">
+					<button id="dayB" class="loginButton" style="font-size: 0.8em; background: #9DC2E0;" onclick="changeTime('day')">Hores/Dia</button>
+					<button id="weekB" class="loginButton" style="font-size: 0.8em;" onclick="changeTime('week')">Hores/Setmana</button>
+				</div>
+
+				<h3 style="padding-top: 1.8em;"> Potència: </h3>
+				<table style="padding: 0; margin-top: -1em; display: flex; height: 20%;">
+					<tr>
+						<td style="width: 10%;"></td>
+						<td style="width: 40%;"><input class="roomName" id="potencia" style="width: 100%; margin-top: 0;" type="text" value="11"></td>
+						<td style="width: 10%;"><h4 style="padding-top: 0.2em;"> W </h4></td>
+					</tr>
+				</table>
+
+				<h3 style="margin-top:-0.7em;">Nº Unitats: </h3>
+				<table>
+					<tr>
+						<td><img id="rest" style="cursor: pointer;" src="./img/lessP.png" alt="Login"
+							onmouseover="this.src='./img/lessPHover.png';"
+							onmouseout="this.src='./img/lessP.png';" onclick="minusOne()" width="30em;"/></td>
+						<td><h4 id="unitat">1</h4></td>
+						<td><img id="sum" style="cursor: pointer;" src="./img/moreP.png" alt="Login"
+							onmouseover="this.src='./img/morePHover.png';"
+							onmouseout="this.src='./img/moreP.png';" onclick="plusOne()" width="30em;"/> </td>
+					</tr>
+				</table>
+				<div style="display: inline-block;">
+				<table><tr>
+					<td><button id="cancel" class="loginButton" onclick="cancel()" style="padding: 0.5em 1em 0.7em 1em; margin-top: 0.7em;">Descartar</button>
+					<td style="width: 15%;"></td>
+					<td><button id="ok" class="loginButton" onclick="okay()" style="padding: 0.5em 2em 0.7em 2em; margin-top: 0.7em;">Afegir</button><td>
+					</td></tr></table>
+				</div>
+		</div>
+
+		<section>
+			<table>
+				<tr>
+					<td id="habitacions">
+						<div id="habTM">
+							<p style="margin-top: -0.7em;">Habitacions
+							<img id="moreH" style="cursor: pointer; float:right;" src="./img/moreP.png" alt="MoreH"
+								onmouseover="this.src='./img/morePHover.png';"
+								onmouseout="this.src='./img/moreP.png';" width="40em"/></p>
+						</div>
+						<div id="divScroll">
+						<table class="roomsT">
+							<tr>
+								<td class="room">
+									<form>
+										<input class="roomName" type="text" value="Cuina">
+									</form>
+									<table id="cuinaT" style="background-image: url(./img/hab/cuinaPF.png); cursor: pointer;">
+										<tr>
+											<td>
+												<p id="apC1T" class="invisible">AparellC1</p>
+												<img id="apC1" class="invisible" src="./img/dev/bombetaP.png" alt="apC1" style="height:4em;"
+													onclick="changeApC1()"
+													onmouseover="mouseOverApC1()"
+													onmouseout="mouseOutApC1()"/>
+											</td>
+											<td>
+												<p id="apC2T" class="invisible">AparellC2</p>
+												<img id="apC2" class="invisible" src="./img/dev/bombetaP.png" alt="apC2" style="height:4em;"
+													onclick="changeApC2()"
+													onmouseover="mouseOverApC2()"
+													onmouseout="mouseOutApC2()"/>
+											</td>
+											<td>
+												<p id="apC3T" class="invisible">AparellC3</p>
+												<img id="apC3" class="invisible" src="./img/dev/bombetaP.png" alt="apC3" style="height:4em;"
+													onclick="changeApC3()"
+													onmouseover="mouseOverApC3()"
+													onmouseout="mouseOutApC3()"/>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p id="apC4T" class="invisible">AparellC4</p>
+												<img id="apC4" class="invisible" src="./img/dev/bombetaP.png" alt="apC4" style="height:4em;"
+													onclick="changeApC4()"
+													onmouseover="mouseOverApC4()"
+													onmouseout="mouseOutApC4()"/>
+											</td>
+											<td>
+												<p id="apC5T" class="invisible">AparellC5</p>
+												<img id="apC5" class="invisible" src="./img/dev/bombetaP.png" alt="apC5" style="height:4em;"
+													onclick="changeApC5()"
+													onmouseover="mouseOverApC5()"
+													onmouseout="mouseOutApC5()"/>
+											</td>
+											<td>
+												<p id="apC6T" class="invisible">AparellC6</p>
+												<img id="apC6" class="invisible" src="./img/dev/bombetaP.png" alt="apC6" style="height:4em;"
+													onclick="changeApC6()"
+													onmouseover="mouseOverApC6()"
+													onmouseout="mouseOutApC6()"/>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p id="apC7T" class="invisible">AparellC7</p>
+												<img id="apC7" class="invisible" src="./img/dev/bombetaP.png" alt="apC7" style="height:4em;"
+													onclick="changeApC7()"
+													onmouseover="mouseOverApC7()"
+													onmouseout="mouseOutApC7()"/>
+											</td>
+											<td>
+												<p id="apC8T" class="invisible">AparellC8</p>
+												<img id="apC8" class="invisible" src="./img/dev/bombetaP.png" alt="apC8" style="height:4em;"
+													onclick="changeApC8()"
+													onmouseover="mouseOverApC8()"
+													onmouseout="mouseOutApC8()"/>
+											</td>
+											<td>
+												<p id="apC9T" class="invisible">AparellC9</p>
+												<img id="apC9" class="invisible" src="./img/dev/bombetaP.png" alt="apC9" style="height:4em;"
+													onclick="changeApC9()"
+													onmouseover="mouseOverApC9()"
+													onmouseout="mouseOutApC9()"/>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td class="room">
+									<form>
+										<input class="roomName" type="text" value="Lavabo">
+									</form>
+									<table id="lavaboT" style="background-image: url(./img/hab/lavaboP.png); cursor: pointer;">
+										<tr>
+											<td>
+												<p id="apL1T" class="invisible">AparellL1</p>
+												<img id="apL1" class="invisible" src="./img/dev/bombetaP.png" alt="apL1" style="height:4em;"
+													onclick="changeApL1()"
+													onmouseover="mouseOverApL1()"
+													onmouseout="mouseOutApL1()"/>
+											</td>
+											<td>
+												<p id="apL2T" class="invisible">AparellL2</p>
+												<img id="apL2" class="invisible" src="./img/dev/bombetaP.png" alt="apL2" style="height:4em;"
+													onclick="changeApL2()"
+													onmouseover="mouseOverApL2()"
+													onmouseout="mouseOutApL2()"/>
+											</td>
+											<td>
+												<p id="apL3T" class="invisible">AparellL3</p>
+												<img id="apL3" class="invisible" src="./img/dev/bombetaP.png" alt="apL3" style="height:4em;"
+													onclick="changeApL3()"
+													onmouseover="mouseOverApL3()"
+													onmouseout="mouseOutApL3()"/>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p id="apL4T" class="invisible">AparellL4</p>
+												<img id="apL4" class="invisible" src="./img/dev/bombetaP.png" alt="apL4" style="height:4em;"
+													onclick="changeApL4()"
+													onmouseover="mouseOverApL4()"
+													onmouseout="mouseOutApL4()"/>
+											</td>
+											<td>
+												<p id="apL5T" class="invisible">AparellL5</p>
+												<img id="apL5" class="invisible" src="./img/dev/bombetaP.png" alt="apL5" style="height:4em;"
+													onclick="changeApL5()"
+													onmouseover="mouseOverApL5()"
+													onmouseout="mouseOutApL5()"/>
+											</td>
+											<td>
+												<p id="apL6T" class="invisible">AparellL6</p>
+												<img id="apL6" class="invisible" src="./img/dev/bombetaP.png" alt="apL6" style="height:4em;"
+													onclick="changeApL6()"
+													onmouseover="mouseOverApL6()"
+													onmouseout="mouseOutApL6()"/>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p id="apL7T" class="invisible">AparellL7</p>
+												<img id="apL7" class="invisible" src="./img/dev/bombetaP.png" alt="apL7" style="height:4em;"
+													onclick="changeApL7()"
+													onmouseover="mouseOverApL7()"
+													onmouseout="mouseOutApL7()"/>
+											</td>
+											<td>
+												<p id="apL8T" class="invisible">AparellL8</p>
+												<img id="apL8" class="invisible" src="./img/dev/bombetaP.png" alt="apL8" style="height:4em;"
+													onclick="changeApL8()"
+													onmouseover="mouseOverApL8()"
+													onmouseout="mouseOutApL8()"/>
+											</td>
+											<td>
+												<p id="apL9T" class="invisible">AparellL9</p>
+												<img id="apL9" class="invisible" src="./img/dev/bombetaP.png" alt="apL9" style="height:4em;"
+													onclick="changeApL9()"
+													onmouseover="mouseOverApL9()"
+													onmouseout="mouseOutApL9()"/>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td class="room">
+									<form>
+										<input class="roomName" type="text" value="Dormitori">
+									</form>
+									<table id="dormT" style="background-image: url(./img/hab/dormitoriP.png); cursor: pointer;">
+										<tr>
+											<td>
+												<p id="apD1T" class="invisible">AparellD1</p>
+												<img id="apD1" class="invisible" src="./img/dev/bombetaP.png" alt="apD1" style="height:4em;"
+													onclick="changeApD1()"
+													onmouseover="mouseOverApD1()"
+													onmouseout="mouseOutApD1()"/>
+											</td>
+											<td>
+												<p id="apD2T" class="invisible">AparellD2</p>
+												<img id="apD2" class="invisible" src="./img/dev/bombetaP.png" alt="apD2" style="height:4em;"
+													onclick="changeApD2()"
+													onmouseover="mouseOverApD2()"
+													onmouseout="mouseOutApD2()"/>
+											</td>
+											<td>
+												<p id="apD3T" class="invisible">AparellD3</p>
+												<img id="apD3" class="invisible" src="./img/dev/bombetaP.png" alt="apD3" style="height:4em;"
+													onclick="changeApD3()"
+													onmouseover="mouseOverApD3()"
+													onmouseout="mouseOutApD3()"/>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p id="apD4T" class="invisible">AparellD4</p>
+												<img id="apD4" class="invisible" src="./img/dev/bombetaP.png" alt="apD4" style="height:4em;"
+													onclick="changeApD4()"
+													onmouseover="mouseOverApD4()"
+													onmouseout="mouseOutApD4()"/>
+											</td>
+											<td>
+												<p id="apD5T" class="invisible">AparellD5</p>
+												<img id="apD5" class="invisible" src="./img/dev/bombetaP.png" alt="apD5" style="height:4em;"
+													onclick="changeApD5()"
+													onmouseover="mouseOverApD5()"
+													onmouseout="mouseOutApD5()"/>
+											</td>
+											<td>
+												<p id="apD6T" class="invisible">AparellD6</p>
+												<img id="apD6" class="invisible" src="./img/dev/bombetaP.png" alt="apD6" style="height:4em;"
+													onclick="changeApD6()"
+													onmouseover="mouseOverApD6()"
+													onmouseout="mouseOutApD6()"/>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p id="apD7T" class="invisible">AparellD7</p>
+												<img id="apD7" class="invisible" src="./img/dev/bombetaP.png" alt="apD7" style="height:4em;"
+													onclick="changeApD7()"
+													onmouseover="mouseOverApD7()"
+													onmouseout="mouseOutApD7()"/>
+											</td>
+											<td>
+												<p id="apD8T" class="invisible">AparellD8</p>
+												<img id="apD8" class="invisible" src="./img/dev/bombetaP.png" alt="apD8" style="height:4em;"
+													onclick="changeApD8()"
+													onmouseover="mouseOverApD8()"
+													onmouseout="mouseOutApD8()"/>
+											</td>
+											<td>
+												<p id="apD9T" class="invisible">AparellD9</p>
+												<img id="apD9" class="invisible" src="./img/dev/bombetaP.png" alt="apD9" style="height:4em;"
+													onclick="changeApD9()"
+													onmouseover="mouseOverApD9()"
+													onmouseout="mouseOutApD9()"/>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td class="room">
+									<form>
+										<input class="roomName" type="text" value="Sala1">
+									</form>
+									<table id="sala1T" style="background-image: url(./img/hab/salaP.png); cursor: pointer;">
+										<tr>
+											<td>
+												<p id="apS1T" class="invisible">AparellS1</p>
+												<img id="apS1" class="invisible" src="./img/dev/bombetaP.png" alt="apS11" style="height:4em;"
+													onclick="changeApS1()"
+													onmouseover="mouseOverApS1()"
+													onmouseout="mouseOutApS1()"/>
+											</td>
+											<td>
+												<p id="apS2T" class="invisible">AparellS2</p>
+												<img id="apS2" class="invisible" src="./img/dev/bombetaP.png" alt="apS12" style="height:4em;"
+													onclick="changeApS2()"
+													onmouseover="mouseOverApS2()"
+													onmouseout="mouseOutApS2()"/>
+											</td>
+											<td>
+												<p id="apS3T" class="invisible">AparellS3</p>
+												<img id="apS3" class="invisible" src="./img/dev/bombetaP.png" alt="apS13" style="height:4em;"
+													onclick="changeApS3()"
+													onmouseover="mouseOverApS3()"
+													onmouseout="mouseOutApS3()"/>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p id="apS4T" class="invisible">AparellS4</p>
+												<img id="apS4" class="invisible" src="./img/dev/bombetaP.png" alt="apS14" style="height:4em;"
+													onclick="changeApS4()"
+													onmouseover="mouseOverApS4()"
+													onmouseout="mouseOutApS4()"/>
+											</td>
+											<td>
+												<p id="apS5T" class="invisible">AparellS5</p>
+												<img id="apS5" class="invisible" src="./img/dev/bombetaP.png" alt="apS15" style="height:4em;"
+													onclick="changeApS5()"
+													onmouseover="mouseOverApS5()"
+													onmouseout="mouseOutApS5()"/>
+											</td>
+											<td>
+												<p id="apS6T" class="invisible">AparellS6</p>
+												<img id="apS6" class="invisible" src="./img/dev/bombetaP.png" alt="apS16" style="height:4em;"
+													onclick="changeApS6()"
+													onmouseover="mouseOverApS6()"
+													onmouseout="mouseOutApS6()"/>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p id="apS7T" class="invisible">AparellS7</p>
+												<img id="apS7" class="invisible" src="./img/dev/bombetaP.png" alt="apS17" style="height:4em;"
+													onclick="changeApS7()"
+													onmouseover="mouseOverApS7()"
+													onmouseout="mouseOutApS7()"/>
+											</td>
+											<td>
+												<p id="apS8T" class="invisible">AparellS8</p>
+												<img id="apS8" class="invisible" src="./img/dev/bombetaP.png" alt="apS18" style="height:4em;"
+													onclick="changeApS8()"
+													onmouseover="mouseOverApS8()"
+													onmouseout="mouseOutApS8()"/>
+											</td>
+											<td>
+												<p id="apS9T" class="invisible">AparellS9</p>
+												<img id="apS9" class="invisible" src="./img/dev/bombetaP.png" alt="apS19" style="height:4em;"
+													onclick="changeApS9()"
+													onmouseover="mouseOverApS9()"
+													onmouseout="mouseOutApS9()"/>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr id = "extraRow">
+								<td class="room">
+									<form>
+										<input class="roomName" type="text" value="Sala2">
+										<img id="deleteH" style="cursor: pointer;  margin-left: 2em; margin-bottom: -0.3em;" src= "./img/deleteP.png"
+										onmouseover="this.src='./img/deletePHover.png';"
+										onmouseout="this.src='./img/deleteP.png';"
+										onclick="deleteH()" width="20em"/>
+									</form>
+									<table id="extraT" style="cursor: pointer;">
+										<tr>
+											<td>
+												<p id="apE1T" class="invisible">AparellE1</p>
+												<img id="apE1" class="invisible" src="./img/dev/bombetaP.png" alt="apS21" style="height:4em;"
+													onclick="changeApE1()"
+													onmouseover="mouseOverApE1()"
+													onmouseout="mouseOutApE1()"/>
+											</td>
+											<td>
+												<p id="apE2T" class="invisible">AparellE2</p>
+												<img id="apE2" class="invisible" src="./img/dev/bombetaP.png" alt="apS22" style="height:4em;"
+													onclick="changeApE2()"
+													onmouseover="mouseOverApE2()"
+													onmouseout="mouseOutApE2()"/>
+											</td>
+											<td>
+												<p id="apE3T" class="invisible">AparellE3</p>
+												<img id="apE3" class="invisible" src="./img/dev/bombetaP.png" alt="apS23" style="height:4em;"
+													onclick="changeApE3()"
+													onmouseover="mouseOverApE3()"
+													onmouseout="mouseOutApE3()"/>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p id="apE4T" class="invisible">AparellE4</p>
+												<img id="apE4" class="invisible" src="./img/dev/bombetaP.png" alt="apS24" style="height:4em;"
+													onclick="changeApE4()"
+													onmouseover="mouseOverApE4()"
+													onmouseout="mouseOutApE4()"/>
+											</td>
+											<td>
+												<p id="apE5T" class="invisible">AparellE5</p>
+												<img id="apE5" class="invisible" src="./img/dev/bombetaP.png" alt="apS25" style="height:4em;"
+													onclick="changeApE5()"
+													onmouseover="mouseOverApE5()"
+													onmouseout="mouseOutApE5()"/>
+											</td>
+											<td>
+												<p id="apE6T" class="invisible">AparellE6</p>
+												<img id="apE6" class="invisible" src="./img/dev/bombetaP.png" alt="apS26" style="height:4em;"
+													onclick="changeApE6()"
+													onmouseover="mouseOverApE6()"
+													onmouseout="mouseOutApE6()"/>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p id="apE7T" class="invisible">AparellE7</p>
+												<img id="apE7" class="invisible" src="./img/dev/bombetaP.png" alt="apS27" style="height:4em;"
+													onclick="changeApE7()"
+													onmouseover="mouseOverApE7()"
+													onmouseout="mouseOutApE7()"/>
+											</td>
+											<td>
+												<p id="apE8T" class="invisible">AparellE8</p>
+												<img id="apE8" class="invisible" src="./img/dev/bombetaP.png" alt="apS28" style="height:4em;"
+													onclick="changeApE8()"
+													onmouseover="mouseOverApE8()"
+													onmouseout="mouseOutApE8()"/>
+											</td>
+											<td>
+												<p id="apE9T" class="invisible">AparellE9</p>
+												<img id="apE9" class="invisible" src="./img/dev/bombetaP.png" alt="apS29" style="height:4em;"
+													onclick="changeApE9()"
+													onmouseover="mouseOverApE9()"
+													onmouseout="mouseOutApE9()"/>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						</div>
+					</td>
+					<td id="aparells">
+						<div id="apTM">
+							<p style="margin: 0; margin-top: 0.7em;">Aparells</p>
+						</div>
+						<table class="devices">
+							<tr>
+								<td>
+									<p id= "ap1T">Aire condicionat</p>
+									<img id="ap1" src="./img/dev/aireP.png" alt="Aparell1" style="height:4em;"
+										onclick="changeAp1()"
+										onmouseover="mouseOverAp1()"
+										onmouseout="mouseOutAp1()"/>
+								</td>
+								<td>
+									<p id= "ap2T" style="text-decoration: underline">Bombeta</p>
+									<img id="ap2" src="./img/dev/bombetaP.png" alt="Aparell2" style="height:4em;"
+										onclick="changeAp2()"
+										onmouseover="mouseOverAp2()"
+										onmouseout="mouseOutAp2()"/>
+								</td>
+								<td>
+									<p id= "ap3T" style="text-decoration: underline">Forn</p>
+									<img id="ap3" src="./img/dev/fornP.png" alt="Aparell3" style="height:4em;"
+										onclick="changeAp3()"
+										onmouseover="mouseOverAp3()"
+										onmouseout="mouseOutAp3()"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p id= "ap4T" style="text-decoration: underline">Microones</p>
+									<img id="ap4" src="./img/dev/microonesP.png" alt="Aparell4" style="height:4em;"
+										onclick="changeAp4()"
+										onmouseover="mouseOverAp4()"
+										onmouseout="mouseOutAp4()"/>
+								</td>
+								<td>
+									<p id= "ap5T" style="text-decoration: underline">Nevera</p>
+									<img id="ap5" src="./img/dev/neveraP.png" alt="Aparell5" style="height:4em;"
+										onclick="changeAp5()"
+										onmouseover="mouseOverAp5()"
+										onmouseout="mouseOutAp5()"/>
+								</td>
+								<td>
+									<p id= "ap6T">Ordinador</p>
+									<img id="ap6" src="./img/dev/pcP.png" alt="Aparell6" style="height:4em;"
+										onclick="changeAp6()"
+										onmouseover="mouseOverAp6()"
+										onmouseout="mouseOutAp6()"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p id= "ap7T">Rentadora</p>
+									<img id="ap7" src="./img/dev/rentadoraP.png" alt="Aparell7" style="height:4em;"
+										onclick="changeAp7()"
+										onmouseover="mouseOverAp7()"
+										onmouseout="mouseOutAp7()"/>
+								</td>
+								<td>
+									<p id= "ap8T" style="text-decoration: underline">Rentaplats</p>
+									<img id="ap8" src="./img/dev/rentaplatsP.png" alt="Aparell8" style="height:4em;"
+										onclick="changeAp8()"
+										onmouseover="mouseOverAp8()"
+										onmouseout="mouseOutAp8()"/>
+								</td>
+								<td>
+									<p id= "ap9T">Router WiFi</p>
+									<img id="ap9" src="./img/dev/routerP.png" alt="Aparell9" style="height:4em;"
+										onclick="changeAp9()"
+										onmouseover="mouseOverAp9()"
+										onmouseout="mouseOutAp9()"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p id= "ap10T" style="text-decoration: underline">Televisió</p>
+									<img id="ap10" src="./img/dev/teleP.png" alt="Aparell10" style="height:4em;"
+										onclick="changeAp10()"
+										onmouseover="mouseOverAp10()"
+										onmouseout="mouseOutAp10()"/>
+								</td>
+								<td>
+									<p id= "ap11T">Videoconsola</p>
+									<img id="ap11" src="./img/dev/consolaP.png" alt="Aparell11" style="height:4em;"
+										onclick="changeAp11()"
+										onmouseover="mouseOverAp11()"
+										onmouseout="mouseOutAp11()"/>
+								</td>
+								<td>
+									<img id="moreA" style="cursor: pointer;" src="./img/moreP.png" alt="MoreA"
+										onmouseover="this.src='./img/morePHover.png';"
+										onmouseout="this.src='./img/moreP.png';" width="40em"/>
+								</td>
+							</tr>
+						</table>
+						<p id="asterisc">* Els aparells subratllats són els més habituals<br> en el tipus d'habitació seleccionada </p>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<div id="pop-up">
+					<p>Si el consum de l'aparell es concentra
+						en dies de la setmana concrets és
+						millor introduir la quantitat d'hores
+						que s'utilitza l'aparell per setmana.
+						En cas contrari (si es fa un ús similar de
+						l'aparell cada dia de la setmana),
+						també és acurat introduir la quantitat d'hores que
+						s'utilitza l'aparell al dia.</p>
+			</div>
+		<footer>
+			<p>&#169 2016 Control Consum</p>
+		</footer>
+
+	</body>
+
+</html>

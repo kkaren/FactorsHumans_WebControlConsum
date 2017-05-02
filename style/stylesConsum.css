@@ -1,0 +1,395 @@
+/**** Body ****/
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/**** Header (Navigation Bar) ****/
+header {
+	margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+header table tr td {
+	text-align: center;
+}
+
+.menuButton{
+	background-color: pink;
+	border: 0.15em solid black;
+	width: 8em;
+	height: 3em;
+}
+
+.menuButton a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+}
+
+#perfil{
+	background-color: #CDE3F5;
+	border: 0.15em solid #85AFD2;
+	cursor: pointer;
+}
+
+#perfil:hover {
+	background-color: #9DC2E0;
+}
+
+#consum{
+	background-color: #CE9668;
+	border: 0.15em solid #B2733F;
+}
+
+#consum:hover {
+	background-color: #CE9668;
+}
+
+#verd{
+	background-color: #C7E5AA;
+	border: 0.15em solid #6BA038;
+	cursor: pointer;
+}
+
+#verd:hover {
+	background-color: #8AB95D;
+}
+
+#logo{
+	height: 3em;
+	width: 8em;
+}
+
+#login{
+	height: 3em;
+	width: 3em;
+	cursor: pointer;
+}
+
+.overlay{
+    padding: 1em 1em 0.5em 1em;
+    border: 0.2em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 8em;
+  	height: 5em;
+  	background-color: #E4F0FB;
+  	border-radius: 2%;
+  	text-align:center;
+	z-index: 1;
+}
+
+#idUser{
+	margin: 0;
+	padding-top: 0.3em;
+    border: 0.15em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 3em;
+  	height: 1.8em;
+  	background-color: #E4F0FB;
+  	border-radius: 40%;
+  	text-align: center;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1em;
+}
+
+.logoutButton {
+	border: 0.15em solid #85AFD2;
+	background-color: #CDE3F5;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0.2em 0.3em 0.2em 0.3em;
+	cursor: pointer;	
+	height: 100%;
+	margin-top: 1.5em;
+}
+
+.logoutButton:hover {
+	background-color: #9DC2E0;
+}
+
+#sortirB{
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	background-color: #FFDBBE;
+	border: 0.15em solid #B2733F;	
+}
+
+#sortirB:hover{
+	background-color: #CE9668;
+}
+
+#warning-box{
+	background-color: #FFE9D7; 
+	border: 0.15em solid #B2733F;	
+	width: 15em; 
+	height: 14em; 
+}
+
+#close{
+	width: 1.15em; 
+	height: 1.15em;
+	float: right;
+	cursor: pointer;
+}
+
+/**** Login Box ****/
+#login-box{
+    padding: 0 1em 0.5em 1em;
+    border: 0.2em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 11em;
+  	height: 13em;
+  	background-color: #E4F0FB;
+  	border-radius: 2%;
+  	text-align:center;
+}
+
+.textBoxLog{
+	float: left;
+	border: 0.15em solid black;
+	font-family: "Arial", "Gadget", "sans-serif";
+	font-size: 1em;
+	width: 80%;
+	height: 100%;
+	margin: 2em 0.8em 0em 0.8em;
+}
+
+.loginButton {
+	border: 0.15em solid #85AFD2;
+	background-color: #CDE3F5;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0.2em 0.3em 0.2em 0.3em;
+	cursor: pointer;	
+	height: 100%;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.loginButton:hover {
+	background-color: #9DC2E0;
+}
+
+
+/**** Wrapper ****/
+#wrap{
+	background-color: rgba(255, 233, 215, 0.25);
+	border: 0.2em solid #B2733F;
+	height: 100%;
+	width: 90%;
+	margin: 2em 4em 0.5em 4em;
+}
+
+/**** Section ****/
+section {
+	float: left;
+	width: 20%;	
+	height: 100%;
+	margin-left: 1em;
+	margin-bottom: 1em;
+	margin-top: 0.6em;
+}
+
+table {
+	width: 100%;
+	height: 100%;
+}
+ 
+.upButton {
+	border: 0.2em solid #B2733F;
+	border-radius: 1%;
+}
+
+.downButton {
+	border: 0.2em solid #B2733F;
+	border-radius: 1%;
+}
+
+.upButton a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+	cursor: pointer;
+}
+
+.downButton a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+	cursor: pointer;
+}
+
+/**** Aside ****/
+aside {	
+	display: inline-block;
+	float: left;
+	width: 73%;
+	height: 100%;
+	margin-bottom: 0;
+	margin-left: 1.5em;
+	margin-right: 1em;
+}
+
+#graf {
+	width: 100%;
+	border: 0.15em solid #B2733F;
+	padding: 0;
+	margin: 0;
+	border-radius: 0.8%;
+}
+
+figure {
+	align-items: center;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0.1em;
+}
+
+#registerB{
+	background-color: #FFDBBE;
+	border: 0.15em solid #B2733F;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 50%;
+}
+
+#registerB:hover{
+	background-color: #CE9668;
+}
+
+.switch {
+	position: relative;
+	margin-top: 0.5em;
+	display: inline-block;
+	width: 4em;
+	height: 2.2em;
+	cursor: pointer;
+}
+
+.switch input {
+	display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0.15em solid #B2733F;
+  background-color: #FFDBBE;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.7em;
+  left: 0.2em;
+  bottom: 0.25em;
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+   background-color: #CE9668;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 0.1em #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.5em);
+  -ms-transform: translateX(1.5em);
+  transform: translateX(1.5em);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 2em;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.tab {
+	background-color: #FFDBBE;
+	border: 0.15em solid #B2733F;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+    display: inline;
+	align-items: left;
+	justify-content: top;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1em;
+	cursor: pointer;
+	border-radius: 5%;
+	margin-top: 1em;
+}
+
+
+h2{
+	font-family: "Arial", "Gadget", "sans-serif";
+	font-size: 1.3em;
+	display: inline-block;
+}
+
+h4{
+	font-family: "Arial", "Gadget", "sans-serif";
+	padding-left: 1em;
+	padding-top: 1em;
+	margin: 0;
+}
+/**** Footer ****/
+footer {
+	margin: 0.5em 4em 0.5em 4em;
+	clear: both;
+}
+
+footer p {
+	color: black;
+	text-align: right;
+}

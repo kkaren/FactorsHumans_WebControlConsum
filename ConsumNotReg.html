@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Control Consum - Consum</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="./style/stylesConsum.css"/>
+	</head>
+
+	<body>
+		<script src="./code/jquery-1.12.3.js"></script>
+		<script type="text/JavaScript" src="./code/codeGrafiquesNotReg.js"></script>
+		<header>
+			<table>
+				<tr>
+					<td style="width: 4%;"></td>
+					<td id="logo" style="width: 5%;">
+						<a>
+							<img src="./img/Title.png" alt="Control Consum Logo" style="height:3em; cursor: pointer;"/>
+						</a>
+					</td>
+					<td style="width: 10%;"></td>
+					<td id = "perfil" class="menuButton">
+						<a href="Perfil.html">Perfil</a>
+					</td>
+					<td id = "consum" class="menuButton">
+						<a href="ConsumNotReg.html">Consum</a>
+					</td>
+					<td id = "verd" class="menuButton">
+						<a>Compromís<br>Energètic</a>
+					</td>
+					<td style="width: 5em; height: 3em;">
+							<img id="login" src="./img/Login.png" alt="Login"
+								onmouseover="this.src='./img/LoginHover.png';"
+								onmouseout="this.src='./img/Login.png';"/>
+					</td>
+					<td style="width: 2%;"></td>
+				</tr>
+			</table>
+		</header>
+
+		<div class="overlay" id="login-box">
+			<form action="JavaScript:checkInput()">
+				<h4 style="text-decoration: underline; margin-top: 0.3em; margin-bottom: 1em; padding-left: 0;">Identifica't</h4>
+				<input style="margin-top: 0.5em;" class="textBoxLog" type="text" id="user" placeholder="Usuari">
+				<input class="textBoxLog" type="password" id="password" placeholder="Contrasenya">
+				<a class="loginButton" href="Perfil.html">Crear perfil</a>
+				<input class="loginButton" type="submit" value="Entrar">
+			</form>
+		</div>
+		
+		<div class="overlay" id="warning-box">
+			<img id="close" src="./img/closeC.png" alt="Close"
+								onmouseover="this.src='./img/closeCHover.png';"
+								onmouseout="this.src='./img/closeC.png';"/>
+			<br>
+			<form action="HomePage.html">
+				<h4 style="text-decoration: none; padding-left: 0;">El teu perfil no ha estat registrat, si surts ara es perdran les teves dades i aniràs a la pàgina principal. <br><br> Si estàs d'acord fes click a "Sortir", sinó REGISTRA'T!</h4>
+				<input id="sortirB" class="logoutButton" type="submit" value="Sortir">
+			</form>
+		</div>
+
+		<section id="wrap">
+		<section>
+			<table>
+				<tr><td class="upButton" id="selected"><a onclick="changeTypeNotReg('habitacions')"><img id="imageB" src="./img/botoHabitacionsHover.png" alt="Habs" onmouseover="onMouseOverB('habitacions')" onmouseout="onMouseOutB('habitacions')" width="100%"/></a></td></tr>
+				<tr><td> </br> </td></tr>
+				<tr><td class="downButton" id="notSelected"><a onclick="changeTypeNotReg('aparells')"><img id="imageB2" src="./img/botoAparells.png" alt="Aplls" onmouseover="onMouseOverB('aparells')" onmouseout="onMouseOutB('aparells')" width="100%"/></a></td></tr>
+			</table>
+		</section>	
+		<aside style="width: 75%;">
+			<table>
+				<tr>
+					<td style="width: 40%;"><h4>Aquí es representa el teu consum actual. <br> Si vols mantenir un control sobre el teu consum, i poder veure els canvis registrats en el teu perfil reflectits en diferents gràfiques, no oblidis registrar-te!</h4></td> 
+					<td style="width: 4%;"></td>
+					<td style="width: 20%;"><a id="registerB" href="Registre.html">Registrar-me!</a></td>
+					<td style="width: 4%;"></td>
+					<td>
+						<h2>kW/h</h2>
+					</td>
+					<td>
+						<label class="switch" id="kw">
+							<input type="checkbox" onclick="changeUnitNotReg();">
+  							<div class="slider round"></div>
+						</label>
+					</td>
+					<td>
+						<h2>€/h</h2>
+					</td>
+					<td style="width: 13%;"></td>
+				</tr>
+			</table>
+			<section style="width: 85%;">
+				<figure id="graphic" style="padding: 0;"><img id="graf" src="./img/grafs/grafica1.png" alt="Grafica"></figure>
+			</section>
+		</aside>
+		</section>
+		<footer>
+			<p>&#169 2016 Control Consum</p>
+		</footer>
+
+	</body>
+
+</html>

@@ -1,0 +1,219 @@
+/**** Body ****/
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/**** Header (Navigation Bar) ****/
+header {
+	margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+header table tr td {
+	text-align: center;
+}
+
+#perfil{
+	background-color: #CDE3F5;
+	border: 0.15em solid #85AFD2;
+	cursor: pointer;
+}
+
+#perfil:hover {
+	background-color: #9DC2E0;
+}
+
+#consum{
+	background-color: #FFDBBE;
+	border: 0.15em solid #B2733F;
+}
+
+#consum:hover {
+	background-color: #CE9668;
+}
+
+#verd{
+	background-color: #8AB95D;
+	border: 0.15em solid #6BA038;
+	cursor: pointer;
+}
+
+#verd:hover {
+	background-color: #8AB95D;
+}
+
+.menuButton{
+	background-color: pink;
+	border: 0.15em solid black;
+	width: 8em;
+	height: 3em;
+}
+
+.menuButton a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+}
+
+.menuButton:hover{
+	background-color: purple;
+}
+
+#logo{
+	height: 3em;
+	width: 8em;
+}
+
+#login {
+	height: 3em;
+	width: 3em;
+	cursor: pointer;
+}
+
+.overlay{
+    padding: 1em 1em 0.5em 1em;
+    border: 0.2em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 8em;
+  	height: 5em;
+  	background-color: #E4F0FB;
+  	border-radius: 2%;
+  	text-align:center;
+}
+
+#idUser{
+	margin: 0;
+	padding-top: 0.3em;
+    border: 0.15em solid #85AFD2;
+    justify-content: center;
+	display: none;
+	position: absolute;
+  	width: 3em;
+  	height: 1.8em;
+  	background-color: #E4F0FB;
+  	border-radius: 40%;
+  	text-align: center;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 1em;
+}
+
+.logoutButton {
+	border: 0.15em solid #85AFD2;
+	background-color: #CDE3F5;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0.2em 0.3em 0.2em 0.3em;
+	cursor: pointer;	
+	height: 100%;
+	margin-top: 1.5em;
+}
+
+.logoutButton:hover {
+	background-color: #9DC2E0;
+}
+
+.subMenuButton {
+	background-color: #C7E5AA;
+	border: 0.15em solid #6BA038;
+	width: 8em;
+	height: 2em;
+	padding: 0;
+}
+
+.subMenuButton a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: "Arial Black", "Gadget", "sans-serif";
+	height: 100%;
+	font-size: 0.8em;
+}
+
+.subMenuButton:hover {
+	background-color: #8AB95D;
+}
+
+.subMenuButton.active1 {
+	background-color: #8AB95D;
+}
+
+#leftSpace {
+	height: 2em;
+	width: 28em;
+}
+
+#rightSpace {
+	height: 2em;
+	width: 10em;
+}
+
+/**** Section ****/
+section {
+	border: 0.2em solid #6BA038;
+	background-color: rgba(217, 236, 199, 0.25);
+	display: inline-block;
+	padding: 0em 0em 0em 0.8em;
+	float: left;
+	height: 100%;
+	margin: 0em 4em 0.5em 4em;
+}
+
+table {
+	width: 100%;
+	height: 100%;
+}
+
+h4 {
+	font-family: "Arial", "Gadget", "sans-serif";
+	font-size: 1.1em;
+	margin-left: 0;
+	margin-top: 0;
+}
+
+div {
+	padding: 0em 0.8em 0em 0.8em;
+	float: left;
+	width: 45%;	
+	height: 100%;
+	margin-left: 3em;
+	margin-bottom: 1.5em;
+	margin-top: 0.5em;
+}
+
+figure {
+	justify-content: center;
+	margin-top: 2em;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	width: 100%;
+	height: 100%;
+}
+
+#graf{
+	margin-left: 8em;
+	width:30%; 
+	margin-bottom: 0;
+}
+
+/**** Footer ****/
+footer {
+	margin: 0.5em 4em 0.5em 4em;
+	clear: both;
+}
+
+footer p {
+	color: black;
+	text-align: right;
+}
